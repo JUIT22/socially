@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import Link from 'react-router-dom/Link';
 
 //MUI stuff(material UI)
-import AppBar from '@material-ui/core/AppBar'
-import ToolBar from '@material-ui/core/ToolBar'
-import Button from '@material-ui/core/Button'
+import AppBar from '@material-ui/core/AppBar';
+import ToolBar from '@material-ui/core/ToolBar';
+import Button from '@material-ui/core/Button';
 
 export class Navbar extends Component {
     render() {
