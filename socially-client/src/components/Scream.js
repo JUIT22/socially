@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 
 const styles ={
     card: {
+        position: 'relative',
         diplay: 'flex',
         marginBottom:20
 
@@ -36,7 +37,7 @@ class Scream extends Component {
                 likeCount,
                 commentCount
             }
-        } = this.props
+        } = this.props;
         return (
             <Card className={classes.card}>
                 <CardMedia
