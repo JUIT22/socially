@@ -17,7 +17,8 @@ const styles ={
 
     },
     image:{
-        minWidth:200
+        minWidth: 200,
+        minHeight: 100,
     },
     content:{
         padding: 25,
@@ -41,9 +42,9 @@ class Scream extends Component {
         return (
             <Card className={classes.card}>
                 <CardMedia
+                    className={classes.image}
                     image={userImage}
                     title="Profile image" 
-                    className={classes.image}
                 />
                 <CardContent className={classes.content}>
                     <Typography 
