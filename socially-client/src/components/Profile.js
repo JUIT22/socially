@@ -77,6 +77,7 @@ class Profile extends Component {
     formData.append('image', image, image.name);
     this.props.uploadImage(formData);
   };
+
   handleEditPicture = () => {
     const fileInput = document.getElementById('imageInput');
     fileInput.click();
@@ -145,7 +146,7 @@ class Profile extends Component {
             </Paper>
         ) : (
             <Paper className={classes.paper}> 
-                <Typography variant="body2" align="center">
+                <div variant="body2" align="center">
                     <b>NO PROFILE FOUND!!!</b><br/>
                     Please Login again.
                     <div className={classes.buttons}>
@@ -156,7 +157,7 @@ class Profile extends Component {
                             Signup
                         </Button>
                     </div>
-                </Typography>
+                </div>
             </Paper>
         )) : (<p>loading</p>)
 

@@ -7,12 +7,12 @@ import Profile from '../components/Profile';
 
  class home extends Component {
     state = {
-        screams:null
+        screams: null
     }
      componentDidMount(){
          axios.get('/screams')
-            .then(res=> {
-                console.log(res.data)
+            .then(res => {
+                // console.log(res.data)
                 this.setState({
                     screams:res.data
                 })
@@ -28,7 +28,8 @@ import Profile from '../components/Profile';
             <p>Loading...</p>
         );
         return (
-            <Grid container spacing={16}>
+            <div>
+            <Grid container spacing={10}>
                 <Grid item sm={8} xs={12}>
                     {recentScreamsMarkup}
                 </Grid>
@@ -36,6 +37,8 @@ import Profile from '../components/Profile';
                     <Profile/>
                 </Grid>
             </Grid>
+            
+            </div>
         );
     }
 }
