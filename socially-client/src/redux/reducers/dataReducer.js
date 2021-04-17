@@ -15,7 +15,7 @@ const initialState = {
     loading: false
 };
   
-export default function dataReducer(state = initialState, action) {
+export default function dataReducer(state = initialState, action) {//?
     switch (action.type) {
       case LOADING_DATA:
         return {
@@ -35,16 +35,11 @@ export default function dataReducer(state = initialState, action) {
         };
       case LIKE_SCREAM:
       case UNLIKE_SCREAM:
-        let index = state.screams.findIndex(
-          (scream) => scream.screamId === action.payload.screamId
-        );
+        let index = state.screams.findIndex((scream) => scream.screamId=== action.payload.screamId);
         state.screams[index] = action.payload;
-        if (state.scream.screamId === action.payload.screamId) {
-          state.scream = action.payload;
-        }
         return {
           ...state
-        };
+        }
       case DELETE_SCREAM:
         index = state.screams.findIndex(
           (scream) => scream.screamId === action.payload
