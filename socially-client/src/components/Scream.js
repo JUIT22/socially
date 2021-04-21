@@ -22,7 +22,7 @@ import { likeScream, unlikeScream } from '../redux/actions/dataActions';
 const styles ={
     card: {
         position: 'relative',
-        diplay: 'flex',
+        display: 'flex',
         marginBottom:20
 
     },
