@@ -4,17 +4,20 @@ import {Link} from 'react-router-dom';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 //MUI Stuff
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
+import {Card} from '@material-ui/core';
+import {CardContent} from '@material-ui/core';
+import {CardMedia} from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 
 const styles ={
     card: {
         position: 'relative',
         diplay: 'flex',
-        marginBottom:20
+        marginBottom:20,
 
+    },
+    details: {
+        flexDirection :'column',
     },
     image:{
         minWidth: 200,
@@ -22,8 +25,8 @@ const styles ={
     },
     content:{
         padding: 25,
-        objectFit:'cover'
-    }
+        objectFit:'cover',
+    },
 }; 
 class Scream extends Component {
     render() {
@@ -41,6 +44,7 @@ class Scream extends Component {
         } = this.props;
         return (
             <Card className={classes.card}>
+                <div className={classes.details}>
                 <CardMedia
                     className={classes.image}
                     image={userImage}
@@ -67,6 +71,8 @@ class Scream extends Component {
                         {body}
                     </Typography>
                 </CardContent>
+                </div>
+                
             </Card>
         );
     }
