@@ -67,7 +67,7 @@ import {
   // Like a scream
   export const likeScream = (screamId) => (dispatch) => {
     axios
-      .post(`/scream/${screamId}/like`)
+      .get(`/scream/${screamId}/like`)
       .then((res) => {
         dispatch({
           type: LIKE_SCREAM,
@@ -79,7 +79,7 @@ import {
   // Unlike a scream
   export const unlikeScream = (screamId) => (dispatch) => {
     axios
-      .post(`/scream/${screamId}/unlike`)
+      .get(`/scream/${screamId}/unlike`)
       .then((res) => {
         dispatch({
           type: UNLIKE_SCREAM,
