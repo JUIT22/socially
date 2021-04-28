@@ -18,6 +18,7 @@ import home from './pages/home';
 import login from './pages/login';
 import signup from './pages/signup';
 import user from './pages/user';
+import newsfeed from './pages/newsfeed';
 
 import axios from 'axios';
 
@@ -57,6 +58,7 @@ class App extends Component {
                   path="/users/:handle/scream/:screamId"
                   component={user}
                 />
+                <Route exact path="/news" component={newsfeed} />
               </Switch>
             </div>
           </Router>
