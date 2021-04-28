@@ -3,69 +3,71 @@ import PropTypes from 'prop-types';
 import withStyles from '@material-ui/core/styles/withStyles';
 import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
+import EditDetails from './EditDetails';
+import MyButton from '../../util/MyButton';
 //REDUX
 import { connect } from 'react-redux';
-import { logoutUser, uploadImage } from '../redux/actions/userActions';
+import { logoutUser, uploadImage } from '../../redux/actions/userActions';
 //MUI
 import Button from '@material-ui/core/Button';
 import MuiLink from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
-import IconButton from '@material-ui/core/IconButton';
-import Tooltip from '@material-ui/core/Tooltip';
 //Icons
 import LocationOn from '@material-ui/icons/LocationOn';
 import LinkIcon from '@material-ui/icons/Link';
 import CalendarToday from '@material-ui/icons/CalendarToday';
 import EditIcon from '@material-ui/icons/Edit';
+import KeyboardReturn from '@material-ui/icons/KeyboardReturn';
 
 const styles = (theme) => ({
-    paper: {
-        padding: 20,
-        marginLeft: 15
-      },
-      profile: {
-        '& .image-wrapper': {
-          textAlign: 'center',
-          position: 'relative',
-          '& button': {
-            position: 'absolute',
-            top: '80%',
-            left: '70%'
-          }
-        },
-        '& .profile-image': {
-          width: 200,
-          height: 200,
-          objectFit: 'cover',
-          maxWidth: '100%',
-          borderRadius: '50%'
-        },
-        '& .profile-details': {
-          textAlign: 'center',
-          '& span, svg': {
-            verticalAlign: 'middle'
-          },
-          '& a': {
-            color: '#00bcd4'
-          }
-        },
-        '& hr': {
-          border: 'none',
-          margin: '0 0 10px 0'
-        },
-        '& svg.button': {
-          '&:hover': {
-            cursor: 'pointer'
-          }
-        }
-      },
-      buttons: {
-        textAlign: 'center',
-        '& a': {
-          margin: '20px 10px'
-        }
-      }    
+  ...theme.spreadThis
+    // paper: {
+    //     padding: 20,
+    //     marginLeft: 15
+    //   },
+    //   profile: {
+    //     '& .image-wrapper': {
+    //       textAlign: 'center',
+    //       position: 'relative',
+    //       '& button': {
+    //         position: 'absolute',
+    //         top: '80%',
+    //         left: '70%'
+    //       }
+    //     },
+    //     '& .profile-image': {
+    //       width: 200,
+    //       height: 200,
+    //       objectFit: 'cover',
+    //       maxWidth: '100%',
+    //       borderRadius: '50%'
+    //     },
+    //     '& .profile-details': {
+    //       textAlign: 'center',
+    //       '& span, svg': {
+    //         verticalAlign: 'middle'
+    //       },
+    //       '& a': {
+    //         color: '#00bcd4'
+    //       }
+    //     },
+    //     '& hr': {
+    //       border: 'none',
+    //       margin: '0 0 10px 0'
+    //     },
+    //     '& svg.button': {
+    //       '&:hover': {
+    //         cursor: 'pointer'
+    //       }
+    //     }
+    //   },
+    //   buttons: {
+    //     textAlign: 'center',
+    //     '& a': {
+    //       margin: '20px 10px'
+    //     }
+    //   }    
 });
 
 
@@ -81,6 +83,10 @@ class Profile extends Component {
   handleEditPicture = () => {
     const fileInput = document.getElementById('imageInput');
     fileInput.click();
+  }
+
+  handleLogout = () =>{
+    this.props.logoutUser();
   }
     render() {
         const { classes, 
@@ -110,11 +116,9 @@ class Profile extends Component {
                           hidden="hidden"
                           onChange={this.handleImageChange}
                         />
-                        <Tooltip title="Edit profile picture" placement="top">
-                        <IconButton onClick={this.handleEditPicture} className="button">
+                        <MyButton tip="Edit Profile Picture" onClick={this.handleEditPicture} btnClassName="button">
                           <EditIcon color="primary"/>
-                        </IconButton>
-                        </Tooltip>
+                        </MyButton>
                     </div>
                     <hr/> 
                     <div className="profile-details">
@@ -141,7 +145,11 @@ class Profile extends Component {
                         )}
                         <CalendarToday color="primary"/>{' '}
                         <span>Joined {dayjs(createdAt).format('MMM YYYY')}</span>
-                    </div>      
+                    </div>  
+                    <MyButton tip="Logout" onClick={this.handleLogout}>
+                          <KeyboardReturn color="primary"/>
+                    </MyButton>
+                    <EditDetails/>
                 </div>     
             </Paper>
         ) : (
@@ -178,4 +186,7 @@ Profile.protoTypes = {
     classes: PropTypes.object.isRequired
 };
 
-export default connect(mapStateToProps, mapActionsToProps)(withStyles(styles)(Profile))
+export default connect(
+  mapStateToProps, 
+  mapActionsToProps
+)(withStyles(styles)(Profile));
