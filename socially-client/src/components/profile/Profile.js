@@ -109,7 +109,7 @@ class Profile extends Component {
             <Paper className={classes.paper}>
                 <div className={classes.profile}>
                     <div className="image-wrapper">
-                        <img src={imageUrl} alt="profile" className="profile-image"/>
+                        <img src={imageUrl} alt="profile" className="profile-image" style={{maxWidth: '-webkit-fill-available'}}/>
                         <input 
                           type="file" 
                           id="imageInput" 
@@ -121,7 +121,7 @@ class Profile extends Component {
                         </MyButton>
                     </div>
                     <hr/> 
-                    <div className="profile-details">
+                    <div className="profile-details" style={{textAlign: 'center'}}>
                         <MuiLink component={Link} to={`/users/${handle}`} color="primary" variant="h5">
                             @{handle}
                         </MuiLink>
@@ -155,7 +155,7 @@ class Profile extends Component {
         ) : (
             <Paper className={classes.paper}> 
                 <div variant="body2" align="center">
-                    <b>NO PROFILE FOUND!!!</b><br/>
+                    <b>NO PROFILE FOUND!</b><br/>
                     Please Login again.
                     <div className={classes.buttons}>
                         <Button variant="contained" color="primary" component={Link} to="/login">
