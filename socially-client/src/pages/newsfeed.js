@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import News from '../components/news/News';
 import axios from 'axios';
+import StaticNews from '../util/StaticNews';
 
 class newsfeed extends Component {
     constructor(props) {
@@ -10,11 +11,15 @@ class newsfeed extends Component {
 
     //do not uncomment this until required. 
     componentDidMount() {
+        //uncomment the below 4 lines (axios part) before hosting.
+
         // axios.get('https://newsapi.org/v2/top-headlines?country=in&apiKey=6c7ffa4ca7c343929691ae092e280890').then((res) => {
         //     const data = res.data.articles;
         //     this.setState({news: data});
         // });
-        console.log("axios part");
+
+        //comment out the below line before hosting
+        this.setState({news: StaticNews.articles});
     }
 
     render() {
