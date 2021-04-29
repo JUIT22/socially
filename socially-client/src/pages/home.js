@@ -9,6 +9,8 @@ import ScreamSkeleton from '../util/ScreamSkeleton';
 import { connect } from 'react-redux';
 import { getScreams } from '../redux/actions/dataActions';
 
+//import backgroundImg from '../images/bg.jpg'
+
 class home extends Component {
   componentDidMount() {
     this.props.getScreams();
@@ -21,7 +23,7 @@ class home extends Component {
       <ScreamSkeleton />
     );
     return (
-      <Grid container spacing={10}>
+      <Grid container spacing={10} >
         <Grid item sm={8} xs={12}>
           {recentScreamsMarkup}
         </Grid>

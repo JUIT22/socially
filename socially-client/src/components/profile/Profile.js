@@ -21,53 +21,53 @@ import EditIcon from '@material-ui/icons/Edit';
 import KeyboardReturn from '@material-ui/icons/KeyboardReturn';
 
 const styles = (theme) => ({
-  ...theme.spreadThis
-    // paper: {
-    //     padding: 20,
-    //     marginLeft: 15
-    //   },
-    //   profile: {
-    //     '& .image-wrapper': {
-    //       textAlign: 'center',
-    //       position: 'relative',
-    //       '& button': {
-    //         position: 'absolute',
-    //         top: '80%',
-    //         left: '70%'
-    //       }
-    //     },
-    //     '& .profile-image': {
-    //       width: 200,
-    //       height: 200,
-    //       objectFit: 'cover',
-    //       maxWidth: '100%',
-    //       borderRadius: '50%'
-    //     },
-    //     '& .profile-details': {
-    //       textAlign: 'center',
-    //       '& span, svg': {
-    //         verticalAlign: 'middle'
-    //       },
-    //       '& a': {
-    //         color: '#00bcd4'
-    //       }
-    //     },
-    //     '& hr': {
-    //       border: 'none',
-    //       margin: '0 0 10px 0'
-    //     },
-    //     '& svg.button': {
-    //       '&:hover': {
-    //         cursor: 'pointer'
-    //       }
-    //     }
-    //   },
-    //   buttons: {
-    //     textAlign: 'center',
-    //     '& a': {
-    //       margin: '20px 10px'
-    //     }
-    //   }    
+  ...theme.spreadThis,
+    paper: {
+        padding: 20,
+        marginLeft: 15
+      },
+      profile: {
+        '& .image-wrapper': {
+          textAlign: 'center',
+          position: 'relative',
+          '& button': {
+            position: 'absolute',
+            top: '80%',
+            left: '70%'
+          }
+        },
+        '& .profile-image': {
+          width: 200,
+          height: 200,
+          objectFit: 'cover',
+          maxWidth: '100%',
+          borderRadius: '50%'
+        },
+        '& .profile-details': {
+          textAlign: 'center',
+          '& span, svg': {
+            verticalAlign: 'middle'
+          },
+          '& a': {
+            color: '#00bcd4'
+          }
+        },
+        '& hr': {
+          border: 'none',
+          margin: '0 0 10px 0'
+        },
+        '& svg.button': {
+          '&:hover': {
+            cursor: 'pointer'
+          }
+        }
+      },
+      buttons: {
+        textAlign: 'center',
+        '& a': {
+          margin: '20px 10px'
+        }
+      }    
 });
 
 
@@ -155,8 +155,11 @@ class Profile extends Component {
         ) : (
             <Paper className={classes.paper}> 
                 <div variant="body2" align="center">
-                    <b>NO PROFILE FOUND!</b><br/>
-                    Please Login again.
+                    <p>
+                        <b>NO PROFILE FOUND!</b>
+                    </p>
+                    <br/>
+                    <p>Please Login again.</p>
                     <div className={classes.buttons}>
                         <Button variant="contained" color="primary" component={Link} to="/login">
                             Login

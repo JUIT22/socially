@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import Paper from '@material-ui/core/Paper'
 // Redux stuff
 import { connect } from 'react-redux';
 import { signupUser } from '../redux/actions/userActions';
@@ -60,9 +61,10 @@ class signup extends Component {
     const { errors } = this.state;
 
     return (
+      <Paper style={{height: '100%'}} elevation={3}>
       <Grid container className={classes.form}>
         <Grid item sm />
-        <Grid item sm>
+        <Grid item sm style={{padding: '38px 0'}}>
           <img src={AppIcon} alt="monkey" className={classes.image} />
           <Typography variant="h2" className={classes.pageTitle}>
             SignUp
@@ -141,6 +143,7 @@ class signup extends Component {
         </Grid>
         <Grid item sm />
       </Grid>
+      </Paper>
     );
   }
 }
