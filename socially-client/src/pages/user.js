@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 import Scream from '../components/scream/Scream';
 import StaticProfile from '../components/profile/StaticProfile';
-import Profile from '../components/profile/Profile';
 import Grid from '@material-ui/core/Grid';
 
 import ScreamSkeleton from '../util/ScreamSkeleton';
