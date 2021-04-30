@@ -14,7 +14,7 @@ class ShareScream extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        this.props.postScream({ body: `${this.state.title} - <a>${this.state.url}` })
+        this.props.postScream({ body: `${this.state.title} - ${this.state.url}` })
         alert('Scream Posted');
     };
 

@@ -93,6 +93,13 @@ class ScreamDialog extends Component {
       UI: { loading }
     } = this.props;
 
+    let tempBody=body,article;
+    const indexOfHttp=body?.indexOf("http");
+    if(indexOfHttp!==-1){
+      article=body?.substring(indexOfHttp);
+      tempBody=body?.substring(0,indexOfHttp-1);
+    }
+
     const dialogMarkup = loading ? (
       <div className={classes.spinnerDiv}>
         <CircularProgress size={200} thickness={2} />
@@ -116,7 +123,7 @@ class ScreamDialog extends Component {
             {dayjs(createdAt).format('h:mm a, MMMM DD YYYY')}
           </Typography>
           <hr className={classes.invisibleSeparator} />
-          <Typography variant="body1">{body}</Typography>
+          <Typography variant="body1">{tempBody} {article? <a href={article} style={{color:"#0069c0"}}><strong>Read Article here</strong></a>:""}</Typography>
           <LikeButton screamId={screamId} />
           <span>{likeCount} likes</span>
           <MyButton tip="comments">
