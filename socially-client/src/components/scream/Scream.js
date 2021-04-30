@@ -54,6 +54,13 @@ class Scream extends Component {
       }
     } = this.props;
 
+    let tempBody=body,article;
+    const indexOfA=body.indexOf("<a>");
+    if(indexOfA!==-1 && body.substring(indexOfA+3,indexOfA+7)==="http"){
+      article=body.substring(indexOfA+3);
+      tempBody=body.substring(0,indexOfA-1);
+    }
+    
     const deleteButton =
       authenticated && userHandle === handle ? (
         <DeleteScream screamId={screamId} />
@@ -78,7 +85,7 @@ class Scream extends Component {
           <Typography variant="body2" color="textSecondary">
             {dayjs(createdAt).fromNow()}
           </Typography>
-          <Typography variant="body1">{body}</Typography>
+          <Typography variant="body1">{tempBody} {article? <a href={article} style={{color:"#0069c0"}}><strong>Read Article here</strong></a>:""}</Typography>
           <LikeButton screamId={screamId} />
           <span>{likeCount} Likes</span>
           <MyButton tip="comments" >
