@@ -123,7 +123,7 @@ class ScreamDialog extends Component {
             {dayjs(createdAt).format('h:mm a, MMMM DD YYYY')}
           </Typography>
           <hr className={classes.invisibleSeparator} />
-          <Typography variant="body1">{tempBody} {article? <a href={article} style={{color:"#0069c0"}}><strong>Read Article here</strong></a>:""}</Typography>
+          <Typography variant="body1">{tempBody} {article? <a target="_blank" rel="noreferrer"  href={article} style={{color:"#0069c0"}}><strong>Read Article here</strong></a>:""}</Typography>
           <LikeButton screamId={screamId} />
           <span>{likeCount} likes</span>
           <MyButton tip="comments">
