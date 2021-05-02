@@ -12,6 +12,7 @@ import Button from '@material-ui/core/Button';
 import HomeIcon from '@material-ui/icons/Home';
 import Notifications from '@material-ui/icons/Notifications';
 import PublicIcon from '@material-ui/icons/Public';
+import ForumIcon from '@material-ui/icons/Forum';
 
 export class Navbar extends Component {
     render() {
@@ -33,6 +34,11 @@ export class Navbar extends Component {
                             <Link to='/news'>
                                 <MyButton tip="News">
                                     <PublicIcon />
+                                </MyButton>
+                            </Link>
+                            <Link to='/chat'>
+                                <MyButton tip="Chats">
+                                    <ForumIcon />
                                 </MyButton>
                             </Link>
                         </Fragment>

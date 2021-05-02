@@ -19,6 +19,7 @@ import login from './pages/login';
 import signup from './pages/signup';
 import user from './pages/user';
 import newsfeed from './pages/newsfeed';
+import chatfeed from './pages/chatfeed';
 
 import axios from 'axios';
 
@@ -63,6 +64,7 @@ class App extends Component {
                   component={user}
                 />
                 <Route exact path="/news" component={newsfeed} />
+                <Route exact path="/chat" component={chatfeed} />
               </Switch>
             </div>
           </Router>
