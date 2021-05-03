@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import withStyles from "@material-ui/core/styles/withStyles";
 import dayjs from "dayjs";
@@ -71,14 +71,32 @@ const StaticProfile = (props) => {
     profile: { handle, createdAt, imageUrl, bio, website, location },
   } = props;
 
+  const [following, setFollowing] = useState(false);
+  const [currentUser, setCurrentUser] = useState("");
+
+  useEffect(() => {
+    axios.get("/user").then((res) => {
+      if (res.data.credentials.following.includes(handle)) {
+        setFollowing(true);
+      } else {
+        setFollowing(false);
+      }
+      setCurrentUser(res.data.credentials.handle);
+    });
+  }, []);
+
+  useEffect(() => {}, [following]);
+
   const handleFollow = (e) => {
     e.preventDefault();
     axios.post(`/user/${handle}/follow`);
+    setFollowing(true);
   };
 
   const handleUnfollow = (e) => {
     e.preventDefault();
     axios.post(`/user/${handle}/unfollow`);
+    setFollowing(false);
   };
 
   return (
@@ -116,23 +134,34 @@ const StaticProfile = (props) => {
               <hr />
             </Fragment>
           )}
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-evenly",
-            }}
-          >
-            <Button onClick={handleFollow} variant="contained" color="primary">
-              Follow
-            </Button>
-            <Button
-              onClick={handleUnfollow}
-              variant="contained"
-              color="secondary"
+          {handle === currentUser ? (
+            ""
+          ) : (
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-evenly",
+              }}
             >
-              Unfollow
-            </Button>
-          </div>
+              {following ? (
+                <Button
+                  onClick={handleUnfollow}
+                  variant="contained"
+                  color="secondary"
+                >
+                  Unfollow
+                </Button>
+              ) : (
+                <Button
+                  onClick={handleFollow}
+                  variant="contained"
+                  color="primary"
+                >
+                  Follow
+                </Button>
+              )}
+            </div>
+          )}
           <br />
           <CalendarToday color="primary" />{" "}
           <span>Joined {dayjs(createdAt).format("MMM YYYY")}</span>
