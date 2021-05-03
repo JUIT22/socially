@@ -1,72 +1,88 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
-import withStyles from '@material-ui/core/styles/withStyles';
-import dayjs from 'dayjs';
-import { Link } from 'react-router-dom';
+import React, { Fragment, useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import withStyles from "@material-ui/core/styles/withStyles";
+import dayjs from "dayjs";
+import { Link } from "react-router-dom";
 // MUI
-import MuiLink from '@material-ui/core/Link';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
+import MuiLink from "@material-ui/core/Link";
+import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
 // Icons
-import LocationOn from '@material-ui/icons/LocationOn';
-import LinkIcon from '@material-ui/icons/Link';
-import CalendarToday from '@material-ui/icons/CalendarToday';
+import LocationOn from "@material-ui/icons/LocationOn";
+import LinkIcon from "@material-ui/icons/Link";
+import CalendarToday from "@material-ui/icons/CalendarToday";
+
+import axios from "axios";
 
 const styles = (theme) => ({
   ...theme.spreadThis,
   paper: {
     padding: 20,
-    marginLeft: 15
+    marginLeft: 15,
   },
   profile: {
-    '& .image-wrapper': {
-      textAlign: 'center',
-      position: 'relative',
-      '& button': {
-        position: 'absolute',
-        top: '80%',
-        left: '70%'
-      }
+    "& .image-wrapper": {
+      textAlign: "center",
+      position: "relative",
+      "& button": {
+        position: "absolute",
+        top: "80%",
+        left: "70%",
+      },
     },
-    '& .profile-image': {
+    "& .profile-image": {
       width: 200,
       height: 200,
-      objectFit: 'cover',
-      maxWidth: '100%',
-      borderRadius: '50%'
+      objectFit: "cover",
+      maxWidth: "100%",
+      borderRadius: "50%",
     },
-    '& .profile-details': {
-      textAlign: 'center',
-      '& span, svg': {
-        verticalAlign: 'middle'
+    "& .profile-details": {
+      textAlign: "center",
+      "& span, svg": {
+        verticalAlign: "middle",
       },
-      '& a': {
-        color: '#00bcd4'
-      }
+      "& a": {
+        color: "#00bcd4",
+      },
     },
-    '& hr': {
-      border: 'none',
-      margin: '0 0 10px 0'
+    "& hr": {
+      border: "none",
+      margin: "0 0 10px 0",
     },
-    '& svg.button': {
-      '&:hover': {
-        cursor: 'pointer'
-      }
-    }
+    "& svg.button": {
+      "&:hover": {
+        cursor: "pointer",
+      },
+    },
   },
   buttons: {
-    textAlign: 'center',
-    '& a': {
-      margin: '20px 10px'
-    }
-  }    
+    textAlign: "center",
+    "& a": {
+      margin: "20px 10px",
+    },
+  },
 });
 
 const StaticProfile = (props) => {
+  // const [following, setFollowing] = useState();
+
   const {
     classes,
-    profile: { handle, createdAt, imageUrl, bio, website, location }
+    profile: { handle, createdAt, imageUrl, bio, website, location },
   } = props;
+
+  const handleFollow = (e) => {
+    e.preventDefault();
+    axios.post(`/user/${handle}/follow`);
+    // setFollowing(false);
+  };
+
+  const handleUnfollow = (e) => {
+    e.preventDefault();
+    axios.post(`/user/${handle}/unfollow`);
+    // setFollowing(false);
+  };
 
   return (
     <Paper className={classes.paper}>
@@ -97,14 +113,16 @@ const StaticProfile = (props) => {
             <Fragment>
               <LinkIcon color="primary" />
               <a href={website} target="_blank" rel="noopener noreferrer">
-                {' '}
+                {" "}
                 {website}
               </a>
               <hr />
             </Fragment>
           )}
-          <CalendarToday color="primary" />{' '}
-          <span>Joined {dayjs(createdAt).format('MMM YYYY')}</span>
+          <button onClick={handleFollow}>Follow</button>
+          <button onClick={handleUnfollow}>Unfollow</button>
+          <CalendarToday color="primary" />{" "}
+          <span>Joined {dayjs(createdAt).format("MMM YYYY")}</span>
         </div>
       </div>
     </Paper>
@@ -113,7 +131,7 @@ const StaticProfile = (props) => {
 
 StaticProfile.propTypes = {
   profile: PropTypes.object.isRequired,
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(StaticProfile);
