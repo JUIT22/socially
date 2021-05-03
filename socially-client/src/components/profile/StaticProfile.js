@@ -145,6 +145,7 @@ const StaticProfile = (props) => {
             >
               {following ? (
                 <Button
+                  size="small"
                   onClick={handleUnfollow}
                   variant="contained"
                   color="secondary"
@@ -153,6 +154,7 @@ const StaticProfile = (props) => {
                 </Button>
               ) : (
                 <Button
+                  size="small"
                   onClick={handleFollow}
                   variant="contained"
                   color="primary"

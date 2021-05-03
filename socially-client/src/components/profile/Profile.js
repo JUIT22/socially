@@ -160,7 +160,18 @@ class Profile extends Component {
                 </Fragment>
               )}
               <Fragment>
-                <span>Following: {following.length}</span>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  component={Link}
+                  to="/following"
+                  style={{
+                    color: "white",
+                    marginBottom: "5px",
+                  }}
+                >
+                  Following: {following.length}
+                </Button>
               </Fragment>
               <br />
               <CalendarToday color="primary" />{" "}

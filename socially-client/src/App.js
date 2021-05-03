@@ -20,6 +20,7 @@ import signup from "./pages/signup";
 import user from "./pages/user";
 import newsfeed from "./pages/newsfeed";
 import chatfeed from "./pages/chatfeed";
+import following from "./pages/following";
 
 import axios from "axios";
 const theme = createMuiTheme(themeObject);
@@ -67,6 +68,7 @@ class App extends Component {
                 />
                 <Route exact path="/news" component={newsfeed} />
                 <Route exact path="/chat" component={chatfeed} />
+                <Route exact path="/following" component={following} />
               </Switch>
             </div>
           </Router>
