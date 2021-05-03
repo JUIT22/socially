@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import Avatar from "../chatlist/Avatar";
 
 export default class ChatItem extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div
@@ -13,8 +10,7 @@ export default class ChatItem extends Component {
       >
         <div className="chat__item__content">
           <div className="chat__msg">{this.props.msg}</div>
-          <div className="chat__meta">
-          </div>
+          <div className="chat__meta"></div>
         </div>
         <Avatar isOnline="active" image={this.props.image} />
       </div>

@@ -1,10 +1,10 @@
-import React, { Component, useState, createRef, useEffect } from "react";
+import React, { Component, createRef } from "react";
 
 import "./ChatContent.css";
 import Avatar from "../chatlist/Avatar";
 import ChatItem from "./ChatItem";
 
-import SendIcon from '@material-ui/icons/Send';
+import SendIcon from "@material-ui/icons/Send";
 import MyButton from "../../util/MyButton";
 
 export default class ChatContent extends Component {
@@ -13,7 +13,7 @@ export default class ChatContent extends Component {
     {
       key: 1,
       image:
-      "https://huber.ghostpool.com/wp-content/uploads/avatars/3/596dfc2058143-bpfull.png",
+        "https://huber.ghostpool.com/wp-content/uploads/avatars/3/596dfc2058143-bpfull.png",
       type: "",
       msg: "Hi Tim, How are you?",
     },
@@ -34,7 +34,7 @@ export default class ChatContent extends Component {
     {
       key: 4,
       image:
-      "https://huber.ghostpool.com/wp-content/uploads/avatars/3/596dfc2058143-bpfull.png",
+        "https://huber.ghostpool.com/wp-content/uploads/avatars/3/596dfc2058143-bpfull.png",
       type: "",
       msg: "Awesome these days.",
     },
@@ -48,7 +48,7 @@ export default class ChatContent extends Component {
     {
       key: 6,
       image:
-      "https://huber.ghostpool.com/wp-content/uploads/avatars/3/596dfc2058143-bpfull.png",
+        "https://huber.ghostpool.com/wp-content/uploads/avatars/3/596dfc2058143-bpfull.png",
       type: "",
       msg: "what plan mate?",
     },
@@ -75,14 +75,14 @@ export default class ChatContent extends Component {
 
   componentDidMount() {
     window.addEventListener("keydown", (e) => {
-      if (e.keyCode == 13) {
-        if (this.state.msg != "") {
+      if (e.keyCode === 13) {
+        if (this.state.msg !== "") {
           this.chatItms.push({
             key: 1,
             type: "",
             msg: this.state.msg,
             image:
-            "https://huber.ghostpool.com/wp-content/uploads/avatars/3/596dfc2058143-bpfull.png",
+              "https://huber.ghostpool.com/wp-content/uploads/avatars/3/596dfc2058143-bpfull.png",
           });
           this.setState({ chat: [...this.chatItms] });
           this.scrollToBottom();
@@ -99,15 +99,14 @@ export default class ChatContent extends Component {
   render() {
     return (
       <div className="main__chatcontent">
-
         <div className="content__header">
-            <div className="current-chatting-user">
-              <Avatar
-                isOnline="active"
-                image="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTA78Na63ws7B7EAWYgTr9BxhX_Z8oLa1nvOA&usqp=CAU"
-              />
-              <p>Tim Hover</p>
-            </div>
+          <div className="current-chatting-user">
+            <Avatar
+              isOnline="active"
+              image="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTA78Na63ws7B7EAWYgTr9BxhX_Z8oLa1nvOA&usqp=CAU"
+            />
+            <p>Tim Hover</p>
+          </div>
         </div>
 
         <div className="content__body">
@@ -136,9 +135,8 @@ export default class ChatContent extends Component {
               value={this.state.msg}
             />
             <MyButton tip="">
-              <SendIcon/>
+              <SendIcon />
             </MyButton>
-            
           </div>
         </div>
       </div>

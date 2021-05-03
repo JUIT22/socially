@@ -1,57 +1,57 @@
-import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
-import withStyles from '@material-ui/core/styles/withStyles';
-import MyButton from '../../util/MyButton';
-import LikeButton from './LikeButton';
-import Comments from './Comments';
-import CommentForm from './CommentForm';
-import dayjs from 'dayjs';
-import { Link } from 'react-router-dom';
+import React, { Component, Fragment } from "react";
+import PropTypes from "prop-types";
+import withStyles from "@material-ui/core/styles/withStyles";
+import MyButton from "../../util/MyButton";
+import LikeButton from "./LikeButton";
+import Comments from "./Comments";
+import CommentForm from "./CommentForm";
+import dayjs from "dayjs";
+import { Link } from "react-router-dom";
 // MUI Stuff
-import Dialog from '@material-ui/core/Dialog';
-import DialogContent from '@material-ui/core/DialogContent';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import Dialog from "@material-ui/core/Dialog";
+import DialogContent from "@material-ui/core/DialogContent";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
 // Icons
-import CloseIcon from '@material-ui/icons/Close';
-import UnfoldMore from '@material-ui/icons/UnfoldMore';
-import ChatIcon from '@material-ui/icons/Chat';
+import CloseIcon from "@material-ui/icons/Close";
+import UnfoldMore from "@material-ui/icons/UnfoldMore";
+import ChatIcon from "@material-ui/icons/Chat";
 // Redux stuff
-import { connect } from 'react-redux';
-import { getScream, clearErrors } from '../../redux/actions/dataActions';
+import { connect } from "react-redux";
+import { getScream, clearErrors } from "../../redux/actions/dataActions";
 
 const styles = (theme) => ({
   ...theme.spreadThis,
   profileImage: {
     maxWidth: 200,
     height: 200,
-    borderRadius: '50%',
-    objectFit: 'cover'
+    borderRadius: "50%",
+    objectFit: "cover",
   },
   dialogContent: {
-    padding: 20
+    padding: 20,
   },
   closeButton: {
-    position: 'absolute',
-    left: '90%'
+    position: "absolute",
+    left: "90%",
   },
   expandButton: {
-    position: 'absolute',
-    left: '90%'
+    position: "absolute",
+    left: "90%",
   },
   spinnerDiv: {
-    textAlign: 'center',
+    textAlign: "center",
     marginTop: 50,
-    marginBottom: 50
-  }
+    marginBottom: 50,
+  },
 });
 
 class ScreamDialog extends Component {
   state = {
     open: false,
-    oldPath: '',
-    newPath: ''
+    oldPath: "",
+    newPath: "",
   };
   componentDidMount() {
     if (this.props.openDialog) {
@@ -88,16 +88,17 @@ class ScreamDialog extends Component {
         commentCount,
         userImage,
         userHandle,
-        comments
+        comments,
       },
-      UI: { loading }
+      UI: { loading },
     } = this.props;
 
-    let tempBody=body,article;
-    const indexOfHttp=body?.indexOf("http");
-    if(indexOfHttp!==-1){
-      article=body?.substring(indexOfHttp);
-      tempBody=body?.substring(0,indexOfHttp-1);
+    let tempBody = body,
+      article;
+    const indexOfHttp = body?.indexOf("http");
+    if (indexOfHttp !== -1) {
+      article = body?.substring(indexOfHttp);
+      tempBody = body?.substring(0, indexOfHttp - 1);
     }
 
     const dialogMarkup = loading ? (
@@ -106,10 +107,10 @@ class ScreamDialog extends Component {
       </div>
     ) : (
       <Grid container spacing={10}>
-        <Grid item sm={5} style={{backgroundColor: 'lightgrey'}}>
+        <Grid item sm={5} style={{ backgroundColor: "lightgrey" }}>
           <img src={userImage} alt="Profile" className={classes.profileImage} />
         </Grid>
-        <Grid item sm={7} style={{backgroundColor: 'lightgrey'}}>
+        <Grid item sm={7} style={{ backgroundColor: "lightgrey" }}>
           <Typography
             component={Link}
             color="primary"
@@ -120,10 +121,24 @@ class ScreamDialog extends Component {
           </Typography>
           <hr className={classes.invisibleSeparator} />
           <Typography variant="body2" color="textSecondary">
-            {dayjs(createdAt).format('h:mm a, MMMM DD YYYY')}
+            {dayjs(createdAt).format("h:mm a, MMMM DD YYYY")}
           </Typography>
           <hr className={classes.invisibleSeparator} />
-          <Typography variant="body1">{tempBody} {article? <a target="_blank" rel="noreferrer"  href={article} style={{color:"#0069c0"}}><strong>Read Article here</strong></a>:""}</Typography>
+          <Typography variant="body1">
+            {tempBody}{" "}
+            {article ? (
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href={article}
+                style={{ color: "#0069c0" }}
+              >
+                <strong>Read Article here</strong>
+              </a>
+            ) : (
+              ""
+            )}
+          </Typography>
           <LikeButton screamId={screamId} />
           <span>{likeCount} likes</span>
           <MyButton tip="comments">
@@ -173,17 +188,17 @@ ScreamDialog.propTypes = {
   screamId: PropTypes.string.isRequired,
   userHandle: PropTypes.string.isRequired,
   scream: PropTypes.object.isRequired,
-  UI: PropTypes.object.isRequired
+  UI: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   scream: state.data.scream,
-  UI: state.UI
+  UI: state.UI,
 });
 
 const mapActionsToProps = {
   getScream,
-  clearErrors
+  clearErrors,
 };
 
 export default connect(
