@@ -12,6 +12,7 @@ import LocationOn from "@material-ui/icons/LocationOn";
 import LinkIcon from "@material-ui/icons/Link";
 import CalendarToday from "@material-ui/icons/CalendarToday";
 import Button from "@material-ui/core/Button";
+import store from "../../redux/store";
 
 import axios from "axios";
 
@@ -75,14 +76,14 @@ const StaticProfile = (props) => {
   const [currentUser, setCurrentUser] = useState("");
 
   useEffect(() => {
-    axios.get("/user").then((res) => {
-      if (res.data.credentials.following.includes(handle)) {
-        setFollowing(true);
-      } else {
-        setFollowing(false);
-      }
-      setCurrentUser(res.data.credentials.handle);
-    });
+    const state = store.getState();
+    if (state.user.credentials.following.includes(handle)) {
+      setFollowing(true);
+    } else {
+      setFollowing(false);
+    }
+    setCurrentUser(state.user.credentials.handle);
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {}, [following]);

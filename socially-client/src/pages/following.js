@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useState, useEffect } from "react";
 import MuiLink from "@material-ui/core/Link";
 import { Link } from "react-router-dom";
@@ -6,7 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-
+import store from "../redux/store";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
@@ -19,9 +18,8 @@ export default function Following() {
   const classes = useStyles();
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    axios.get("/user").then((res) => {
-      setUsers(res.data.credentials.following);
-    });
+    const state = store.getState();
+    setUsers(state.user.credentials.following);
   }, []);
   return (
     <List className={classes.root}>
