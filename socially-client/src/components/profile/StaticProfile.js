@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import withStyles from "@material-ui/core/styles/withStyles";
 import dayjs from "dayjs";
@@ -11,6 +11,7 @@ import Typography from "@material-ui/core/Typography";
 import LocationOn from "@material-ui/icons/LocationOn";
 import LinkIcon from "@material-ui/icons/Link";
 import CalendarToday from "@material-ui/icons/CalendarToday";
+import Button from "@material-ui/core/Button";
 
 import axios from "axios";
 
@@ -65,8 +66,6 @@ const styles = (theme) => ({
 });
 
 const StaticProfile = (props) => {
-  // const [following, setFollowing] = useState();
-
   const {
     classes,
     profile: { handle, createdAt, imageUrl, bio, website, location },
@@ -75,13 +74,11 @@ const StaticProfile = (props) => {
   const handleFollow = (e) => {
     e.preventDefault();
     axios.post(`/user/${handle}/follow`);
-    // setFollowing(false);
   };
 
   const handleUnfollow = (e) => {
     e.preventDefault();
     axios.post(`/user/${handle}/unfollow`);
-    // setFollowing(false);
   };
 
   return (
@@ -119,8 +116,24 @@ const StaticProfile = (props) => {
               <hr />
             </Fragment>
           )}
-          <button onClick={handleFollow}>Follow</button>
-          <button onClick={handleUnfollow}>Unfollow</button>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-evenly",
+            }}
+          >
+            <Button onClick={handleFollow} variant="contained" color="primary">
+              Follow
+            </Button>
+            <Button
+              onClick={handleUnfollow}
+              variant="contained"
+              color="secondary"
+            >
+              Unfollow
+            </Button>
+          </div>
+          <br />
           <CalendarToday color="primary" />{" "}
           <span>Joined {dayjs(createdAt).format("MMM YYYY")}</span>
         </div>
