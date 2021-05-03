@@ -80,7 +80,7 @@ const StaticProfile = (props) => {
     if (currentUser && state.user.credentials.following.includes(handle)) {
       setFollowing(true);
     } else {
-      setFollowing(true);
+      setFollowing(false);
     }
     setCurrentUser(state.user.credentials.handle);
     // eslint-disable-next-line
