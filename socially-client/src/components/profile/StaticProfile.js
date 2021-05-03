@@ -77,11 +77,13 @@ const StaticProfile = (props) => {
 
   useEffect(() => {
     const state = store.getState();
-    if (currentUser && state.user.credentials.following.includes(handle)) {
+
+    if (state.user.credentials.following.includes(handle)) {
       setFollowing(true);
     } else {
       setFollowing(false);
     }
+
     setCurrentUser(state.user.credentials.handle);
     // eslint-disable-next-line
   }, []);
@@ -90,12 +92,8 @@ const StaticProfile = (props) => {
 
   const handleFollow = (e) => {
     e.preventDefault();
-    if (currentUser) {
-      axios.post(`/user/${handle}/follow`);
-      setFollowing(true);
-    } else {
-      window.location.replace("/login");
-    }
+    axios.post(`/user/${handle}/follow`);
+    setFollowing(true);
   };
 
   const handleUnfollow = (e) => {
@@ -140,14 +138,7 @@ const StaticProfile = (props) => {
             </Fragment>
           )}
           {handle === currentUser ? (
-            <Button
-              size="small"
-              onClick={handleFollow}
-              variant="contained"
-              color="primary"
-            >
-              Follow
-            </Button>
+            ""
           ) : (
             <div
               style={{
