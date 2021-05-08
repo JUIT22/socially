@@ -40,13 +40,14 @@ export class Navbar extends Component {
                   </MyButton>
                 </Link>
 
-                <Notifications />
-
                 <Link to="/news">
                   <MyButton tip="News">
                     <PublicIcon />
                   </MyButton>
                 </Link>
+
+                <Notifications />
+
                 <Link to="/chat">
                   <MyButton tip="Chats">
                     <ForumIcon />

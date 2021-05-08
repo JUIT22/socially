@@ -105,7 +105,10 @@ const StaticProfile = (props) => {
   };
 
   return (
-    <Paper className={classes.paper}>
+    <Paper
+      style={{ position: "fixed", minWidth: "300px" }}
+      className={classes.paper}
+    >
       <div className={classes.profile}>
         <div className="image-wrapper">
           <img src={imageUrl} alt="profile" className="profile-image" />

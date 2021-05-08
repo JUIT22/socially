@@ -216,7 +216,11 @@ class Profile extends Component {
       <p>loading</p>
     );
 
-    return <div style={{ position: "fixed" }}>{profileMarkup}</div>;
+    return (
+      <div style={{ position: "fixed", minWidth: "300px" }}>
+        {profileMarkup}
+      </div>
+    );
   }
 }
 
