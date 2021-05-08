@@ -21,6 +21,7 @@ import user from "./pages/user";
 import newsfeed from "./pages/newsfeed";
 import chatfeed from "./pages/chatfeed";
 import following from "./pages/following";
+import timeline from "./pages/timeline";
 
 import axios from "axios";
 const theme = createMuiTheme(themeObject);
@@ -57,7 +58,8 @@ class App extends Component {
               }}
             >
               <Switch>
-                <Route exact path="/" component={home} />
+                <Route exact path="/explore" component={home} />
+                <Route exact path="/" component={timeline} />
                 <AuthRoute exact path="/login" component={login} />
                 <AuthRoute exact path="/signup" component={signup} />
                 <Route exact path="/users/:handle" component={user} />

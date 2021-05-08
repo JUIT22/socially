@@ -14,6 +14,7 @@ import Typography from "@material-ui/core/Typography";
 import HomeIcon from "@material-ui/icons/Home";
 import PublicIcon from "@material-ui/icons/Public";
 import ForumIcon from "@material-ui/icons/Forum";
+import ExploreIcon from "@material-ui/icons/Explore";
 
 export class Navbar extends Component {
   render() {
@@ -28,8 +29,13 @@ export class Navbar extends Component {
             {authenticated ? (
               <Fragment>
                 <PostScream />
+                <Link to="/explore">
+                  <MyButton tip="Explore">
+                    <ExploreIcon />
+                  </MyButton>
+                </Link>
                 <Link to="/">
-                  <MyButton tip="Home">
+                  <MyButton tip="home">
                     <HomeIcon />
                   </MyButton>
                 </Link>
