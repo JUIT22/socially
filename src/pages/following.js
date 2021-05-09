@@ -19,7 +19,7 @@ export default function Following() {
   const [users, setUsers] = useState({});
   useEffect(() => {
     const state = store.getState();
-    setUsers(state.user.credentials.following);
+    if(state.user.credentials.following) setUsers(state.user.credentials.following);
   }, []);
   return (
     <List className={classes.root}>
