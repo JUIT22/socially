@@ -105,9 +105,6 @@ class Profile extends Component {
       },
     } = this.props;
 
-    let numFollowing = 0;
-    if(following!=null) for(let i in following) numFollowing++;
-
     let profileMarkup = !loading ? (
       authenticated ? (
         <Paper className={classes.paper}>
@@ -173,7 +170,7 @@ class Profile extends Component {
                     marginBottom: "5px",
                   }}
                 >
-                  Following: {numFollowing}
+                  Following: {following.length}
                 </Button>
               </Fragment>
               <br />
