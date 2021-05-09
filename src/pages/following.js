@@ -16,14 +16,14 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Following() {
   const classes = useStyles();
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState({});
   useEffect(() => {
     const state = store.getState();
     setUsers(state.user.credentials.following);
   }, []);
   return (
     <List className={classes.root}>
-      {users.map((user) => (
+      {Object.entries(users).map(([user,imageUrl]) => (
         <ListItem key={user}>
           <MuiLink
             component={Link}

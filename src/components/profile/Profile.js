@@ -106,7 +106,7 @@ class Profile extends Component {
     } = this.props;
 
     let numFollowing = 0;
-    if(following!=null) for(let i in following) numFollowing++;
+    if(following) numFollowing = Object.entries(following).length
 
     let profileMarkup = !loading ? (
       authenticated ? (
