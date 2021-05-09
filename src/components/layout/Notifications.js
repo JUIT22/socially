@@ -60,14 +60,15 @@ class Notifications extends Component {
     let notificationsMarkup =
       notifications && notifications.length > 0 ? (
         notifications.map((not) => {
-          const verb = not.type === "like" ? "liked" : "commented on";
+          const verb = not.type === "like" ? "liked" : (not.type === "follow" ? "followed" : "commented on");
           const time = dayjs(not.createdAt).fromNow();
+          const statement = `${not.sender} ${verb} ${not.type=="follow" ? "you" : "your scream"} ${time}`
           const iconColor = not.read ? "primary" : "secondary";
           const icon =
-            not.type === "like" ? (
-              <FavoriteIcon color={iconColor} style={{ marginRight: 10 }} />
-            ) : (
+            not.type === "comment" ? (
               <ChatIcon color={iconColor} style={{ marginRight: 10 }} />
+            ) : (
+              <FavoriteIcon color={iconColor} style={{ marginRight: 10 }} />
             );
 
           return (
@@ -79,7 +80,7 @@ class Notifications extends Component {
                 variant="body1"
                 to={`/users/${not.recipient}/scream/${not.screamId}`}
               >
-                {not.sender} {verb} your scream {time}
+                {statement}
               </Typography>
             </MenuItem>
           );

@@ -33,6 +33,24 @@ export const getScreams = () => (dispatch) => {
     });
 };
 
+export const getTrendingScreams = () => (dispatch) => {
+  dispatch({ type: LOADING_DATA });
+  axios
+    .get("/tscreams")
+    .then((res) => {
+      dispatch({
+        type: SET_SCREAMS,
+        payload: res.data,
+      });
+    })
+    .catch((err) => {
+      dispatch({
+        type: SET_SCREAMS,
+        payload: [],
+      });
+    });
+};
+
 export const getFriendsScreams = () => (dispatch) => {
   dispatch({ type: LOADING_DATA });
   axios
