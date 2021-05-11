@@ -19,114 +19,100 @@ import ChatIcon from "@material-ui/icons/Chat";
 import { connect } from "react-redux";
 
 const styles = {
-  card: {
-    position: "relative",
-    display: "flex",
-    marginBottom: 20,
-  },
-  image: {
-    minWidth: 200,
-    height: 200,
-  },
-  content: {
-    padding: 25,
-    objectFit: "cover",
-  },
+	card: {
+		position: "relative",
+		display: "flex",
+		marginBottom: 20,
+	},
+	image: {
+		minWidth: 200,
+		height: 200,
+	},
+	content: {
+		padding: 25,
+		objectFit: "cover",
+	},
 };
 
 class Scream extends Component {
-  render() {
-    dayjs.extend(relativeTime);
-    const {
-      classes,
-      scream: {
-        body,
-        createdAt,
-        userImage,
-        userHandle,
-        screamId,
-        likeCount,
-        commentCount,
-      },
-      user: {
-        authenticated,
-        credentials: { handle },
-      },
-    } = this.props;
+	render() {
+		dayjs.extend(relativeTime);
+		const {
+			classes,
+			scream: { body, createdAt, userImage, userHandle, screamId, likeCount, commentCount },
+			user: {
+				authenticated,
+				credentials: { handle },
+			},
+		} = this.props;
 
-    let tempBody = body,
-      article;
-    const indexOfHttp = body.indexOf("http");
-    if (indexOfHttp !== -1) {
-      article = body.substring(indexOfHttp);
-      tempBody = body.substring(0, indexOfHttp - 1);
-    }
+		let prv = 0,
+			parsedBody = [],
+			match;
+		let regex = /http[s]?:\/\/[^\s]+/gi;
+		while ((match = regex.exec(body))) {
+			parsedBody.push({ text: body.substring(prv, match.index), url: false, news: false });
+			if (body.substring(regex.lastIndex - 5, regex.lastIndex) === ".news")
+				parsedBody.push({
+					text: body.substring(match.index, regex.lastIndex - 5),
+					url: true,
+					news: true,
+				});
+			else
+				parsedBody.push({
+					text: body.substring(match.index, regex.lastIndex),
+					url: true,
+					news: false,
+				});
+			prv = regex.lastIndex;
+		}
+		if (prv < body.length) parsedBody.push({ text: body.substring(prv, body.length), url: false, news: false });
 
-    const deleteButton =
-      authenticated && userHandle === handle ? (
-        <DeleteScream screamId={screamId} />
-      ) : null;
-    return (
-      <Card className={classes.card}>
-        <CardMedia
-          image={userImage}
-          title="Profile image"
-          className={classes.image}
-        />
-        <CardContent className={classes.content}>
-          <Typography
-            variant="h5"
-            component={Link}
-            to={`/users/${userHandle}`}
-            color="primary"
-          >
-            {userHandle}
-          </Typography>
-          {deleteButton}
-          <Typography variant="body2" color="textSecondary">
-            {dayjs(createdAt).fromNow()}
-          </Typography>
-          <Typography variant="body1">
-            {tempBody}{" "}
-            {article ? (
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href={article}
-                style={{ color: "#0069c0" }}
-              >
-                <strong>Read Article here</strong>
-              </a>
-            ) : (
-              ""
-            )}
-          </Typography>
-          <LikeButton screamId={screamId} />
-          <span>{likeCount} Likes</span>
-          <MyButton tip="comments">
-            <ChatIcon color="primary" />
-          </MyButton>
-          <span>{commentCount} comments</span>
-          <ScreamDialog
-            screamId={screamId}
-            userHandle={userHandle}
-            openDialog={this.props.openDialog}
-          />
-        </CardContent>
-      </Card>
-    );
-  }
+		const deleteButton = authenticated && userHandle === handle ? <DeleteScream screamId={screamId} /> : null;
+		return (
+			<Card className={classes.card}>
+				<CardMedia image={userImage} title="Profile image" className={classes.image} />
+				<CardContent className={classes.content}>
+					<Typography variant="h5" component={Link} to={`/users/${userHandle}`} color="primary">
+						{userHandle}
+					</Typography>
+					{deleteButton}
+					<Typography variant="body2" color="textSecondary">
+						{dayjs(createdAt).fromNow()}
+					</Typography>
+					<Typography variant="body1">
+						{parsedBody.map((obj) =>
+							obj.url ? (
+								<a target="_blank" rel="noreferrer" href={obj.text} style={{ color: "#0069c0" }}>
+									{obj.news ? "Read Article Here" : obj.text}
+								</a>
+							) : (
+								obj.text
+							)
+						)}
+					</Typography>
+					<LikeButton screamId={screamId} />
+					<span>{likeCount} Likes</span>
+					<MyButton tip="comments">
+						<ChatIcon color="primary" />
+					</MyButton>
+					<span>{commentCount} comments</span>
+					<ScreamDialog screamId={screamId} userHandle={userHandle} openDialog={this.props.openDialog} />
+				</CardContent>
+			</Card>
+		);
+	}
 }
 
 Scream.propTypes = {
-  user: PropTypes.object.isRequired,
-  scream: PropTypes.object.isRequired,
-  classes: PropTypes.object.isRequired,
-  openDialog: PropTypes.bool,
+	user: PropTypes.object.isRequired,
+	scream: PropTypes.object.isRequired,
+	classes: PropTypes.object.isRequired,
+	openDialog: PropTypes.bool,
 };
 
 const mapStateToProps = (state) => ({
-  user: state.user,
+	user: state.user,
 });
 
 export default connect(mapStateToProps)(withStyles(styles)(Scream));
