@@ -7,13 +7,13 @@ import Profile from '../components/profile/Profile';
 import ScreamSkeleton from '../util/ScreamSkeleton';
 
 import { connect } from 'react-redux';
-import { getScreams } from '../redux/actions/dataActions';
+import { getTrendingScreams } from '../redux/actions/dataActions';
 
 //import backgroundImg from '../images/bg.jpg'
 
 class home extends Component {
   componentDidMount() {
-    this.props.getScreams();
+    this.props.getTrendingScreams();
   }
   render() {
     const { screams, loading } = this.props.data;
@@ -36,7 +36,7 @@ class home extends Component {
 }
 
 home.propTypes = {
-  getScreams: PropTypes.func.isRequired,
+  getTrendingScreams: PropTypes.func.isRequired,
   data: PropTypes.object.isRequired
 };
 
@@ -46,5 +46,5 @@ const mapStateToProps = (state) => ({
 
 export default connect(
   mapStateToProps,
-  { getScreams }
+  { getTrendingScreams }
 )(home);

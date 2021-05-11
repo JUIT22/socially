@@ -32,7 +32,6 @@ export default function User({ user, imageUrl, isBeingFollowed }) {
     e.preventDefault();
     if (currentUser) {
       axios.post(`/user/unfollow`, { handle: user });
-      console.log(`xx${user}`)
       setFollowing(false);
     }
   };

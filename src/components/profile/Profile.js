@@ -87,6 +87,7 @@ class Profile extends Component {
 
   handleLogout = () => {
     this.props.logoutUser();
+    window.location.replace("/explore");
   };
   render() {
     const {
