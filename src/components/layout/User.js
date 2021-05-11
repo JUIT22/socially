@@ -21,7 +21,7 @@ export default function User({ user, imageUrl, isBeingFollowed }) {
   const handleFollow = (e) => {
     e.preventDefault();
     if (currentUser) {
-      axios.post(`/user/follow`, { user, imageUrl });
+      axios.post(`/user/follow`, { handle: user, imageUrl });
       setFollowing(true);
     } else {
       window.location.replace("/login");
@@ -31,7 +31,8 @@ export default function User({ user, imageUrl, isBeingFollowed }) {
   const handleUnfollow = (e) => {
     e.preventDefault();
     if (currentUser) {
-      axios.post(`/user/unfollow`, { user });
+      axios.post(`/user/unfollow`, { handle: user });
+      console.log(`xx${user}`)
       setFollowing(false);
     }
   };
