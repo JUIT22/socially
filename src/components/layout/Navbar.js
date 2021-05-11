@@ -39,7 +39,9 @@ export class Navbar extends Component {
                 }}
                 variant="h5"
               >
-                SOCIALLY
+                <Link to="/" style={{ color: "white" }}>
+                  SOCIALLY
+                </Link>
               </Typography>
             </Grid>
             <Grid

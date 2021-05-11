@@ -19,6 +19,7 @@ import LinkIcon from "@material-ui/icons/Link";
 import CalendarToday from "@material-ui/icons/CalendarToday";
 import EditIcon from "@material-ui/icons/Edit";
 import KeyboardReturn from "@material-ui/icons/KeyboardReturn";
+import Following from "../layout/Following";
 
 const styles = (theme) => ({
   ...theme.spreadThis,
@@ -105,9 +106,6 @@ class Profile extends Component {
       },
     } = this.props;
 
-    let numFollowing = 0;
-    if(following) numFollowing = Object.entries(following).length
-
     let profileMarkup = !loading ? (
       authenticated ? (
         <Paper className={classes.paper}>
@@ -162,20 +160,7 @@ class Profile extends Component {
                   <hr />
                 </Fragment>
               )}
-              <Fragment>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  component={Link}
-                  to="/following"
-                  style={{
-                    color: "white",
-                    marginBottom: "5px",
-                  }}
-                >
-                  Following: {numFollowing}
-                </Button>
-              </Fragment>
+              <Following following={following} />
               <br />
               <CalendarToday color="primary" />{" "}
               <span>Joined {dayjs(createdAt).format("MMM YYYY")}</span>

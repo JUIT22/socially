@@ -72,11 +72,15 @@ const StaticProfile = (props) => {
     profile: { handle, createdAt, imageUrl, bio, website, location },
   } = props;
   const state = store.getState();
-  const [currentUser, setCurrentUser] = useState(state.user.credentials.handle);
+  const currentUser = state.user.credentials.handle;
   const [following, setFollowing] = useState(false);
 
   useEffect(() => {
-    if (state.user.credentials.following && currentUser && (handle in state.user.credentials.following)) {
+    if (
+      state.user.credentials.following &&
+      currentUser &&
+      handle in state.user.credentials.following
+    ) {
       setFollowing(true);
     } else {
       setFollowing(false);
@@ -89,7 +93,7 @@ const StaticProfile = (props) => {
   const handleFollow = (e) => {
     e.preventDefault();
     if (currentUser) {
-      axios.post(`/user/follow`,{ handle,imageUrl });
+      axios.post(`/user/follow`, { handle, imageUrl });
       setFollowing(true);
     } else {
       window.location.replace("/login");
@@ -99,7 +103,7 @@ const StaticProfile = (props) => {
   const handleUnfollow = (e) => {
     e.preventDefault();
     if (currentUser) {
-      axios.post(`/user/unfollow`,{ handle });
+      axios.post(`/user/unfollow`, { handle });
       setFollowing(false);
     }
   };

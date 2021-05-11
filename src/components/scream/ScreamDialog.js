@@ -24,7 +24,7 @@ import { getScream, clearErrors } from "../../redux/actions/dataActions";
 const styles = (theme) => ({
   ...theme.spreadThis,
   profileImage: {
-    maxWidth: 200,
+    maxWidth: "max-content",
     height: 200,
     borderRadius: "50%",
     objectFit: "cover",
