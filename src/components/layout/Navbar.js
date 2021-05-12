@@ -13,16 +13,41 @@ import {
   Button,
   Typography,
   TextField,
+  FormControl,
 } from "@material-ui/core";
 //ICONS
 import HomeIcon from "@material-ui/icons/Home";
 import PublicIcon from "@material-ui/icons/Public";
 import ForumIcon from "@material-ui/icons/Forum";
 import ExploreIcon from "@material-ui/icons/Explore";
+import SearchIcon from "@material-ui/icons/Search";
+import { Autocomplete } from "@material-ui/lab";
+import axios from "axios";
+import { ContactlessOutlined } from "@material-ui/icons";
 
 export class Navbar extends Component {
+  state = {
+    users: [],
+    searchContent: "",
+  };
+  componentDidMount() {
+    axios.get("/users").then((res) => {
+      this.setState({ users: res.data.users });
+    });
+  }
+
+  handleChange = (event) => {
+    this.setState({ searchContent: event.target.value });
+  };
+
+  handleSearch = () => {
+    const user = this.state.searchContent;
+    window.location.replace(`/users/${user}`);
+  };
+
   render() {
     const { authenticated } = this.props;
+
     return (
       <AppBar>
         <Toolbar
@@ -53,17 +78,40 @@ export class Navbar extends Component {
               xs={6}
             >
               {authenticated ? (
-                <TextField
-                  id="outlined-basic"
-                  label="Search..."
-                  variant="filled"
-                  InputLabelProps={{
-                    style: { color: "#fff" },
+                <div
+                  style={{
+                    width: 300,
                   }}
-                  InputProps={{
-                    style: { color: "#fff" },
-                  }}
-                />
+                >
+                  <FormControl style={{ width: "300px" }}>
+                    <Autocomplete
+                      freeSolo
+                      id="free-solo-2-demo"
+                      disableClearable
+                      options={this.state.users}
+                      renderInput={(params) => (
+                        <TextField
+                          {...params}
+                          id="filled-basic"
+                          label="Search..."
+                          variant="filled"
+                          onChange={this.handleChange}
+                          InputLabelProps={{
+                            style: { color: "#fff" },
+                          }}
+                          InputProps={{
+                            ...params.InputProps,
+                            type: "search",
+                            style: { color: "#fff" },
+                          }}
+                        />
+                      )}
+                    />
+                    <Button type="submit" onClick={this.handleSearch}>
+                      <SearchIcon />
+                    </Button>
+                  </FormControl>
+                </div>
               ) : (
                 ""
               )}

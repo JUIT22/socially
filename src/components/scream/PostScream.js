@@ -38,6 +38,7 @@ class PostScream extends Component {
     body: "",
     errors: {},
   };
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.UI.errors) {
       this.setState({
@@ -48,6 +49,7 @@ class PostScream extends Component {
       this.setState({ body: "", open: false, errors: {} });
     }
   }
+
   handleOpen = () => {
     this.setState({ open: true });
   };
