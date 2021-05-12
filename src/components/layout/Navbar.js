@@ -23,7 +23,6 @@ import ExploreIcon from "@material-ui/icons/Explore";
 import SearchIcon from "@material-ui/icons/Search";
 import { Autocomplete } from "@material-ui/lab";
 import axios from "axios";
-import { ContactlessOutlined } from "@material-ui/icons";
 
 export class Navbar extends Component {
   state = {
