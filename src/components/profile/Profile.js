@@ -20,6 +20,7 @@ import CalendarToday from "@material-ui/icons/CalendarToday";
 import EditIcon from "@material-ui/icons/Edit";
 import KeyboardReturn from "@material-ui/icons/KeyboardReturn";
 import Following from "../layout/Following";
+import Recommendations from "../layout/Recommendations";
 
 const styles = (theme) => ({
   ...theme.spreadThis,
@@ -162,6 +163,7 @@ class Profile extends Component {
                 </Fragment>
               )}
               <Following following={following} />
+              <Recommendations />
               <br />
               <CalendarToday color="primary" />{" "}
               <span>Joined {dayjs(createdAt).format("MMM YYYY")}</span>
@@ -179,7 +181,7 @@ class Profile extends Component {
               <b>NO PROFILE FOUND!</b>
             </p>
             <br />
-            <p>Please Login again.</p>
+            <p>Please login again.</p>
             <div className={classes.buttons}>
               <Button
                 variant="contained"

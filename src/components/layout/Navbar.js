@@ -41,6 +41,7 @@ export class Navbar extends Component {
 
   handleSearch = () => {
     const user = this.state.searchContent;
+    if (user === "") return;
     window.location.replace(`/users/${user}`);
   };
 
@@ -74,7 +75,6 @@ export class Navbar extends Component {
                 justifyContent: "center",
               }}
               item
-              xs={6}
             >
               {authenticated ? (
                 <div
@@ -101,14 +101,20 @@ export class Navbar extends Component {
                           InputProps={{
                             ...params.InputProps,
                             type: "search",
-                            style: { color: "#fff" },
+                            style: {
+                              color: "#fff",
+                              display: "flex",
+                              alignItems: "center",
+                            },
+                            endAdornment: (
+                              <Button type="submit" onClick={this.handleSearch}>
+                                <SearchIcon />
+                              </Button>
+                            ),
                           }}
                         />
                       )}
                     />
-                    <Button type="submit" onClick={this.handleSearch}>
-                      <SearchIcon />
-                    </Button>
                   </FormControl>
                 </div>
               ) : (
