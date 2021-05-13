@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Fragment } from "react";
 
 //MUI Stuff
-import { Button, Dialog, List } from "@material-ui/core";
+import { Button, Dialog, Grid, List, Typography } from "@material-ui/core";
 
 //ICONS
 import { Close, People } from "@material-ui/icons";
@@ -30,9 +30,28 @@ export default function Following({ following }) {
         {Object.entries(following).length}
       </Button>
       <Dialog open={open} onClose={handleClose} fullWidth maxWidth="sm">
-        <Button tip="Close" onClick={handleClose}>
-          <Close />
-        </Button>
+        <Grid container>
+          <Grid sm={2} item>
+            <Fragment></Fragment>
+          </Grid>
+          <Grid sm={8} item>
+            <Typography
+              variant="h6"
+              style={{ textAlign: "center", paddingTop: "7px" }}
+            >
+              Following
+            </Typography>
+          </Grid>
+          <Grid sm={2} item>
+            <Button
+              style={{ paddingTop: "7px", position: "absolute", right: "0" }}
+              tip="Close"
+              onClick={handleClose}
+            >
+              <Close />
+            </Button>
+          </Grid>
+        </Grid>
         <List>
           {Object.entries(following).map(([user, imageUrl]) => (
             <User
