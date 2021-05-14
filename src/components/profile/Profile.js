@@ -174,7 +174,7 @@ class Profile extends Component {
             <EditDetails />
           </div>
         </Paper>
-      ) : (
+      ) : window.location.pathname === "/explore" ? (
         <Paper className={classes.paper}>
           <div variant="body2" align="center">
             <p>
@@ -202,6 +202,8 @@ class Profile extends Component {
             </div>
           </div>
         </Paper>
+      ) : (
+        window.location.replace(`/login`)
       )
     ) : (
       <p>loading</p>
