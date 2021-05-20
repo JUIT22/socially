@@ -21,8 +21,7 @@ import user from "./pages/user";
 import newsfeed from "./pages/newsfeed";
 import chatfeed from "./pages/chatfeed";
 import timeline from "./pages/timeline";
-import page404 from "./pages/page404";
-
+import page404 from "./pages/page404";  
 import axios from "axios";
 const theme = createMuiTheme(themeObject);
 
