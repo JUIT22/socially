@@ -45,14 +45,25 @@ export default function ChatRoom() {
 
 	return (
 		<>
-		<Paper style={{ height: "100%" }} elevation={3}>
-			
+		<Paper  style={{ height: "100%" }} elevation={8} >
+		<div style={{
+                    
+                    textAlign: 'center',
+                   marin:'auto',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+					backgroundColor:'#0069c0',
+					color:'#fafafa'					
+                }}>
+				<h1>CHAT-ROOM</h1>
+			</div>
+			<div id ="growth">
 			<main>
 				{messages && messages.map((msg) => <ChatMessage key={msg.id} message={msg} />)}
 
 				<span ref={dummy}></span>
-			
-
+				</main>
+			</div>
 			<form className="msg-box" onSubmit={sendMessage}>
 				<TextareaAutosize
 					value={formValue}
@@ -64,7 +75,7 @@ export default function ChatRoom() {
 					<SendIcon/>
 				</button>
 			</form>
-			</main>
+			
 			</Paper>
 		</>
 	);
