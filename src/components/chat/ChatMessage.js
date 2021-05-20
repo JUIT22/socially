@@ -1,12 +1,14 @@
 import React from "react";
-import { auth } from "../firebaseConst";
+//import { auth } from "../firebaseConst";
 //import "firebase/auth";
 import './chat.css';
 export default function ChatMessage(props) {
   const { text, createdAt, uid, photoURL, displayName } = props.message;
 
   //const messageClass = uid === auth.currentUser.uid ? "sent" : "received";
-  const messageClass = uid === auth.currentUser.uid ? "right-msg" : "left-msg";
+  
+  const messageClass = "left-msg";
+  //const messageClass = uid === auth.currentUser.uid ? "right-msg" : "left-msg";
 
   return (
     <>

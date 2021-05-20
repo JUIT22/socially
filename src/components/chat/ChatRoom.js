@@ -1,17 +1,29 @@
 import React, { useRef, useState, useEffect } from "react";
 import ChatMessage from "./ChatMessage";
 import firebase from "firebase/app";
-import { auth, firestore } from "../firebaseConst";
+import {  firestore } from "../firebaseConst";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import TextareaAutosize from "react-textarea-autosize";
 import './chat.css';
 import store from '../../redux/store';
 
+firebase.initializeApp({
+  apiKey: "AIzaSyBfiChOSRUmtiJB-YU57yxMxVv067XmsU0",
+  authDomain: "juit-socially.firebaseapp.com",
+  projectId: "juit-socially",
+  storageBucket: "juit-socially.appspot.com",
+  messagingSenderId: "625307113396",
+  appId: "1:625307113396:web:4749c1ff24fb85da2a04e1",
+  measurementId: "G-EZLDM0SLES"
+});
+
+const firestore = firebase.firestore();
+
 export default function ChatRoom() {
 
-  console.log(auth);
+  //console.log(auth);
   const state = store.getState();
- console.log(state);
+  console.log(state);
   const dummy = useRef();
   const messagesRef = firestore.collection("messages");
   const query = messagesRef.orderBy("createdAt").limitToLast(25);
