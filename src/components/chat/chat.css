@@ -1,21 +1,20 @@
-body {
-    background-color: #282c34;
-  }
+
   
-  form {
-    min-height: 1rem;
-    position: fixed;
+  .msg-box {
+    min-height: 2rem;
+    margin-top :1rem;
     bottom: 0;
     background-color: rgb(24, 23, 23);
     width: 100%;
-    max-width: 728px;
     display: flex;
     font-size: 1.5rem;
+    
+    
   }
   
   form button {
     width: 20%;
-    background-color: rgb(56, 56, 143);
+    background-color: #0069c0;
   }
   
   textarea {
@@ -24,37 +23,42 @@ body {
       sans-serif;
     width: 100%;
     font-size: 1rem;
-    background: #3a3b3c;
-    color: white;
+    background-color: #29434e;
+    color: #fafafa;
     outline: none;
     border: none;
     padding: 0.65rem 10px;
     resize: none;
+    
+    
+  }
+  ::placeholder{
+    color:#819ca9;
   }
   
   button {
-    background-color: #282c34; /* Green */
+    
     border: none;
     color: white;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     cursor: pointer;
     font-size: 1rem;
   }
   
   .sendButton {
-    font-size: 1.5rem;
+    
+    padding-top:0.5rem;
   }
   
   button:disabled {
-    opacity: 0.5;
     cursor: not-allowed;
   }
     
   .message {
     display: flex;
     align-items: center;
+    
   }
   
   .sent {
@@ -83,11 +87,11 @@ body {
     width: 30px;
     height: 30px;
     margin-right: 10px;
-    background: #ddd;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border-radius: 50%;
+    border-radius: 20%;
+    
   }
   .msg-bubble {
     max-width: 450px;
@@ -96,17 +100,17 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 25px;
-    background: #ececec;
+    background:fafafa;
   }
   
   .msg-info-name {
-    font-size: 0.75em;
+    font-size: 1.5rem;
     margin-right: 10px;
-    color: #798791;
+    color: fafafa;
   }
   .msg-info-time {
-    font-size: 0.7em;
-    color: #798791;
+    font-size: 1rem;
+    color: fafafa;
   }
   
   .left-msg .msg-bubble {
@@ -128,11 +132,12 @@ body {
   
   .right-msg .msg-wrapper {
     text-align: right;
+    
   }
   
   .right-msg .msg-bubble {
     display: inline-block;
-    background: #44a0ff;
+    background: #2196f3;
     color: #fff;
     border-bottom-right-radius: 0;
   }
@@ -152,10 +157,6 @@ body {
     word-wrap: break-word;
     text-align: left;
   }
-  
- 
-  
-  
   @media only screen and (max-width: 728px) {
     .msg-bubble {
       max-width: 70vw;

@@ -17,6 +17,9 @@ export default function ChatMessage(props) {
             backgroundImage:
               "url(" + imageUrl ||
               +"https://api.adorable.io/avatars/23/abott@adorable.png)",
+              padding :20,
+              margin : 20,
+              
           }}
         ></div>
         <div className="msg-wrapper">

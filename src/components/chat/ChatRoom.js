@@ -7,7 +7,8 @@ import TextareaAutosize from "react-textarea-autosize";
 import "./chat.css";
 import store from "../../redux/store";
 import config from "../../config";
-
+import Paper from "@material-ui/core/Paper";
+import SendIcon from '@material-ui/icons/Send';
 firebase.initializeApp(config);
 
 const firestore = firebase.firestore();
@@ -44,11 +45,13 @@ export default function ChatRoom() {
 
 	return (
 		<>
+		<Paper style={{ height: "100%" }} elevation={3}>
+			
 			<main>
 				{messages && messages.map((msg) => <ChatMessage key={msg.id} message={msg} />)}
 
 				<span ref={dummy}></span>
-			</main>
+			
 
 			<form className="msg-box" onSubmit={sendMessage}>
 				<TextareaAutosize
@@ -58,9 +61,11 @@ export default function ChatRoom() {
 				/>
 
 				<button className="sendButton" type="submit" disabled={!formValue}>
-					<span role="img">🗯</span>
+					<SendIcon/>
 				</button>
 			</form>
+			</main>
+			</Paper>
 		</>
 	);
 }
