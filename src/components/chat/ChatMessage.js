@@ -1,14 +1,12 @@
 import React from "react";
-//import { auth } from "../firebaseConst";
-//import "firebase/auth";
+import store from '../../redux/store'
 import './chat.css';
-export default function ChatMessage(props) {
-  const { text, createdAt, uid, photoURL, displayName } = props.message;
 
-  //const messageClass = uid === auth.currentUser.uid ? "sent" : "received";
-  
-  const messageClass = "left-msg";
-  //const messageClass = uid === auth.currentUser.uid ? "right-msg" : "left-msg";
+export default function ChatMessage(props) {
+  const { text, createdAt, handle, imageUrl } = props.message;
+  const state = store.getState();
+
+  const messageClass = handle === state.user.credentials.handle ? "right-msg" : "left-msg";
 
   return (
     <>
@@ -17,19 +15,17 @@ export default function ChatMessage(props) {
           className="msg-img"
           style={{
             backgroundImage:
-              "url(" + photoURL ||
+              "url(" + imageUrl ||
               +"https://api.adorable.io/avatars/23/abott@adorable.png)",
           }}
         ></div>
         <div className="msg-wrapper">
           <div className="msg-info">
             <div className="msg-info-name">
-              {messageClass === "left-msg" ? displayName : ""}
+              {messageClass === "left-msg" ? handle : ""}
             </div>
             <div className="msg-info-time">
-              {createdAt
-                ?.toDate()
-                .toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
+              {createdAt}
             </div>
           </div>
           <div className="msg-bubble">
