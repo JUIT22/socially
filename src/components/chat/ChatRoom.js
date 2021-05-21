@@ -45,7 +45,7 @@ export default function ChatRoom() {
 
 	return (
 		<>
-		<Paper  style={{ height: "100%" }} elevation={8} >
+		<Paper  style={{ height: "100%" }} elevation={10} >
 		<div style={{
                     
                     textAlign: 'center',
