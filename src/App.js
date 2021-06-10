@@ -21,12 +21,12 @@ import user from "./pages/user";
 import newsfeed from "./pages/newsfeed";
 import chatfeed from "./pages/chatfeed";
 import timeline from "./pages/timeline";
-import page404 from "./pages/page404";  
+import page404 from "./pages/page404";
 import axios from "axios";
 const theme = createMuiTheme(themeObject);
 
-// axios.defaults.baseURL = 'localhost:3000' ||
-//   'https://asia-south1-juit-socially.cloudfunctions.net/api';
+axios.defaults.baseURL =
+  "https://asia-south1-juit-socially.cloudfunctions.net/api";
 
 const token = localStorage.FBIdToken;
 if (token) {
