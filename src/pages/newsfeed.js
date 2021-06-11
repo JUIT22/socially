@@ -13,17 +13,17 @@ class newsfeed extends Component {
   componentDidMount() {
     //uncomment the below 4 lines (axios part) before hosting.
 
-    // axios
-    //   .get(
-    //     "https://newsapi.org/v2/top-headlines?country=in&apiKey=6c7ffa4ca7c343929691ae092e280890"
-    //   )
-    //   .then((res) => {
-    //     const data = res.data.articles;
-    //     this.setState({ news: data });
-    //   });
+    axios
+      .get(
+        "https://newsapi.org/v2/top-headlines?country=in&apiKey=6c7ffa4ca7c343929691ae092e280890"
+      )
+      .then((res) => {
+        const data = res.data.articles;
+        this.setState({ news: data });
+      });
 
     //comment out the below line before hosting
-    this.setState({ news: StaticNews.articles });
+    //this.setState({ news: StaticNews.articles });
   }
 
   render() {
