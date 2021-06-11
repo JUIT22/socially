@@ -1,6 +1,8 @@
+import dayjs from "dayjs";
 import React from "react";
 import store from '../../redux/store'
 import './chat.css';
+
 
 export default function ChatMessage(props) {
   const { text, createdAt, handle, imageUrl } = props.message;
@@ -28,7 +30,7 @@ export default function ChatMessage(props) {
               {messageClass === "left-msg" ? handle : ""}
             </div>
             <div className="msg-info-time">
-              {createdAt}
+              {dayjs(createdAt).format('MMM D, YYYY h:mm A')}
             </div>
           </div>
           <div className="msg-bubble">

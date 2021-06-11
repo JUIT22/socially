@@ -9,7 +9,7 @@ import store from "../../redux/store";
 import config from "../../config";
 import Paper from "@material-ui/core/Paper";
 import SendIcon from '@material-ui/icons/Send';
-import dayjs from "dayjs";
+
 firebase.initializeApp(config);
 
 const firestore = firebase.firestore();
@@ -35,7 +35,7 @@ export default function ChatRoom() {
 
 		await messagesRef.add({
 			text: formValue,
-			createdAt: dayjs().format('MMM D, YYYY h:mm A'),
+			createdAt: new Date().toISOString(),
 			handle,
 			imageUrl,
 		});
