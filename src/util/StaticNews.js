@@ -1,268 +1,339 @@
 const StaticNews = {
-    "status": "ok",
-    "totalResults": 38,
-    "articles": [
-        {
-            "source": {
-                "id": "the-times-of-india",
-                "name": "The Times of India"
-            },
-            "author": "TIMESOFINDIA.COM",
-            "title": "Coronavirus: Using oxygen at home? Here are some do's and don'ts to follow - Times of India",
-            "description": "With oxygen deprivation and lung infections becoming common problems, oxygen therapy is helpful at a time when it is becoming increasingly difficult to secure medical help in time.",
-            "url": "https://timesofindia.indiatimes.com/life-style/health-fitness/health-news/coronavirus-using-oxygen-at-home-here-are-some-dos-and-donts-to-follow/photostory/82309021.cms",
-            "urlToImage": "https://static.toiimg.com/photo/82309312.cms",
-            "publishedAt": "2021-04-29T11:20:09Z",
-            "content": "Dr Randeep Guleria, Chief, AIIMS New Delhi recently advised patients to keep in mind certain precautions before making use of external oxygen. \"For those individuals who are having an oxygen saturati… [+792 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "NDTV News"
-            },
-            "author": "Tasneem Akolawala",
-            "title": "iPhone 12 Most Popular in Series, Pro Models See ‘Strong Sales’: Tim Cook - Gadgets 360",
-            "description": "During the earnings call for fiscal Q2 2021, Cook said that the iPhone 12 is the most popular in the series, but that the Pro models are also seeing ‘very strong sales’. “iPhone 12 is the most popular, but we did see very strong sales of the Pro portion of th…",
-            "url": "https://gadgets.ndtv.com/mobiles/news/iphone-12-pro-max-mini-sales-popularity-tim-cook-fiscal-q2-2021-earnings-call-2424542",
-            "urlToImage": "https://i.gadgets360cdn.com/large/iPhone_12_purple_1618941834363.jpg",
-            "publishedAt": "2021-04-29T11:06:10Z",
-            "content": "iPhone 12 is the most popular model in the series among customers, Apple chief Tim Cook said during the fiscal Q2 2021 earnings call. The executive said that the iPhone 12 Pro and iPhone 12 Pro Max s… [+1798 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "CNBCTV18"
-            },
-            "author": null,
-            "title": "Stock Market Highlights: Sensex, Nifty end marginally higher amid volatility on F&O expiry; PSU Banks, auto drag; metals outshine - CNBCTV18",
-            "description": "Stock Market Highlights: The Indian equity indices, Sensex and Nifty ended marginally higher on Thursday amid high volatility on F&O expiry. Midcap index ended lower, while smallcap index closed over half a percent higher. Among sectors, metals, financial ser…",
-            "url": "https://www.cnbctv18.com/market/stocks/stock-market-live-updates-sensex-nifty-likely-to-open-higher-as-sgx-nifty-indicates-strong-start-9102611.htm",
-            "urlToImage": "https://images.cnbctv18.com/wp-content/uploads/2020/12/1sakdfkas-768x514.jpg",
-            "publishedAt": "2021-04-29T10:52:32Z",
-            "content": null
-        },
-        {
-            "source": {
-                "id": "the-times-of-india",
-                "name": "The Times of India"
-            },
-            "author": "TIMESOFINDIA.COM",
-            "title": "Randhir Kapoor tests positive for Covid-19; admitted to a hospital - Times of India",
-            "description": "Actor Randhir Kapoor is the latest Bollywood celebrity to have tested positive for COVID-19. The veteran actor has",
-            "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/randhir-kapoor-tests-positive-for-covid-19-admitted-to-a-hospital/articleshow/82309219.cms",
-            "urlToImage": "https://static.toiimg.com/thumb/msid-82309294,width-1070,height-580,overlay-toi_sw,pt-32,y_pad-40,resizemode-75,imgsize-49779/82309294.jpg",
-            "publishedAt": "2021-04-29T10:42:00Z",
-            "content": "In a bid to curb the spread of the coronavirus, the Maharashtra government announced that films, TV serials and advertisement shoots will be halted in the state. In a bid to ''Break The Chain'', Chie… [+131 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "NDTV News"
-            },
-            "author": null,
-            "title": "\"Tell Your Cousin\": The Internet Reacts To Kareena Kapoor's \"Understand The Gravity\" Of COVID Post - NDTV",
-            "description": "\"It's unimaginable for me to know that there are still many people who do not understand the gravity of the situation our country is in,\" wrote Kareena",
-            "url": "https://www.ndtv.com/entertainment/tell-your-cousin-the-internet-reacts-to-kareena-kapoors-understand-the-gravity-of-covid-post-2424517",
-            "urlToImage": "https://c.ndtvimg.com/2021-04/m3mav7i8_kareena-kapoor_625x300_29_April_21.jpg",
-            "publishedAt": "2021-04-29T10:41:01Z",
-            "content": "Kareena Kapoor shared this image. (courtesy kareenakapoorkhan)\r\nHighlights\r\n<ul><li>\"Now more than ever, India needs you,\" wrote Kareena \r\n</li><li>\"Spare a thought for our doctors and medical staff,… [+2097 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Thewire.in"
-            },
-            "author": "Joel P. Joseph",
-            "title": "Is the Universe Different In Different Directions? - The Wire Science",
-            "description": "The answer to this deceptively simple question could also tell us whether dark energy is driving the expansion of the universe.",
-            "url": "https://science.thewire.in/the-sciences/cosmological-principle-universe-expansion-anisotropy-dark-energy-dispute/",
-            "urlToImage": "https://cdn.thewire.in/wp-content/uploads/2018/11/08152840/quasar.jpg",
-            "publishedAt": "2021-04-29T10:29:39Z",
-            "content": "An artist’s impression of how ULAS J1120+0641, a very distant quasar powered by a black hole with a mass two billion times that of the Sun, may have looked. Credit: ESO/M. Kornmesser, CC BY 4.0\r\nBeng… [+11565 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Hindustan Times"
-            },
-            "author": null,
-            "title": "'Doesn't alter...': MHA's clarification on Act making L-G effective in-charge of Delhi - Hindustan Times",
-            "description": "The amendment, which came into effect on April 27, made Delhi’s lieutenant governor the effective in-charge of the national capital.",
-            "url": "https://www.hindustantimes.com/cities/delhi-news/doesnt-alter-mha-s-clarification-on-act-making-l-g-effective-in-charge-of-delhi-101619691447785.html",
-            "urlToImage": "https://images.hindustantimes.com/img/2021/04/29/1600x900/be0bb5ba-86e3-11eb-a796-6f2e47259f88_1615960086959_1619691957067.jpg",
-            "publishedAt": "2021-04-29T10:28:17Z",
-            "content": "The recent amendments to the Government of National Capital Territory (GNCTD) Act, 1991, do not alter the Constitutional and legal responsibilities of the elected government in respect of the transfe… [+1883 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Moneycontrol"
-            },
-            "author": null,
-            "title": "Health Ministry revises home isolation guidelines amid COVID-19 second wave: Check details here - Moneycontrol",
-            "description": "The asymptomatic and mildly infected patients would be allowed to isolate at home only if their oxygen saturation at room air is above 94 percent.",
-            "url": "https://www.moneycontrol.com/news/trends/health-trends/health-ministry-revises-home-isolation-guidelines-amid-covid-19-second-wave-check-details-here-6831351.html",
-            "urlToImage": "https://images.moneycontrol.com/static-mcnews/2021/04/Home-Isolation-shutterstock-770x433.jpg",
-            "publishedAt": "2021-04-29T10:02:42Z",
-            "content": "The Ministry of Health Ministry and Family Welfare (MoHFW) on April 29 issued revised home isolation guidelines. The revision comes amid the onset of the second COVID-19 wave in the country.\r\nThe hom… [+2695 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Moneycontrol"
-            },
-            "author": null,
-            "title": "Rahul Bajaj resigns as Chairman of Bajaj Auto - Moneycontrol",
-            "description": "Mr Bajaj has been named Bajaj Auto Chairman Emeritus for 5 years with effect from May 1.",
-            "url": "https://www.moneycontrol.com/news/business/rahul-bajaj-resigns-as-chairman-of-bajaj-auto-6831581.html",
-            "urlToImage": "https://images.moneycontrol.com/static-mcnews/2018/06/rahul-bajaj-770x433.jpg",
-            "publishedAt": "2021-04-29T09:58:22Z",
-            "content": "Rahul Bajaj has resigned as Chairman of Bajaj Auto. He will be replaced by Niraj Bajaj, the Non-Executive Director of the company.\r\nRahul Bajaj will step down as the Non-Executive Director and the Ch… [+1355 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "The Indian Express"
-            },
-            "author": "Explained Desk",
-            "title": "Explained: Who is Michael Collins, the lesser-known participant of the Apollo 11 mission? - The Indian Express",
-            "description": "On May 25, 1961, then US President John F Kennedy had set a goal for the Apollo 11 mission – to perform a crewed lunar landing and return to Earth",
-            "url": "https://indianexpress.com/article/explained/explained-who-is-michael-collins-the-lesser-known-participant-of-the-apollo-11-mission-7293954/",
-            "urlToImage": "https://images.indianexpress.com/2021/04/collins.jpg",
-            "publishedAt": "2021-04-29T09:51:29Z",
-            "content": "Michael Collins, the pilot of the Apollo 11 spacecraft that carried Neil Armstrong and Edwin Buzz Aldrin to the moon, died on Wednesday in Florida at the age of 90 while battling cancer.\r\nThe Apollo … [+2970 chars]"
-        },
-        {
-            "source": {
-                "id": "the-times-of-india",
-                "name": "The Times of India"
-            },
-            "author": "TIMESOFINDIA.COM",
-            "title": "Covaxin vs Covishield: Difference between Indian Coronavirus vaccines, benefits, side-effects, price difference decoded - Times of India",
-            "description": "Covaxin and Covishield are both homegrown vaccines that have driven India's vaccination drives. Yet, there are some dissimilarities and benefits which peg them apart.",
-            "url": "https://timesofindia.indiatimes.com/life-style/health-fitness/health-news/covaxin-vs-covishield-coronavirus-vaccine-difference-between-indian-coronavirus-vaccines-benefits-side-effects-price-difference-decoded/photostory/82307510.cms",
-            "urlToImage": "https://static.toiimg.com/photo/82307666.cms",
-            "publishedAt": "2021-04-29T09:11:36Z",
-            "content": "Much like other vaccines in the offering, both Covaxin and Covishield carry reactogenic side effects.\r\nMost side-effects recorded with the vaccines are said to be on the milder side- pain at the inje… [+628 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "The Statesman"
-            },
-            "author": "IANS",
-            "title": "NASA astronaut successfully harvests 2 plants in space - The Statesman",
-            "description": "Astronauts have been enjoying the Amara mustard \"like a lettuce wrap,\" Hopkins explained, adding ingredients such as chicken, soy sauce, and balsamic vinegar.",
-            "url": "https://www.thestatesman.com/supplements/science_supplements/nasa-astronaut-successfully-harvests-2-plants-space-1502965254.html",
-            "urlToImage": "https://www.thestatesman.com/wp-content/uploads/2021/04/gardener-flower-nasa-1619611571.jpg",
-            "publishedAt": "2021-04-29T09:07:38Z",
-            "content": "NASAs Expedition 64 crewmember Michael Hopkins has harvested two crops in space — ‘Amara’ mustard, and a previously grown crop, ‘Extra Dwarf’ pak choi. They were grown for 64 days, the longest leafy … [+1884 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "NDTV News"
-            },
-            "author": "Neelav Chakravarti",
-            "title": "MI vs RR, IPL 2021 Live Score: Rohit Sharma, Quinton de Kock Help Mumbai Indians To Steady Start In .. - NDTV Sports",
-            "description": "IPL 2021, MI vs RR live score: Defending a target of 172 runs, Chris Morris has taken a wicket for Rajasthan Royals vs Mumbai Indians, at the Feroz Shah Kotla on Thursday.",
-            "url": "https://sports.ndtv.com/ipl-2021/mi-vs-rr-live-score-online-ipl-2021-match-mumbai-indians-vs-rajasthan-royals-live-cricket-score-2424386",
-            "urlToImage": "https://c.ndtvimg.com/2021-04/msop3dk_quinton-de-kock-bcci-ipl_625x300_29_April_21.jpg",
-            "publishedAt": "2021-04-29T08:45:46Z",
-            "content": "Chasing a target of 172 runs, Mumbai Indians (MI) are a wicket down vs Rajasthan Royals (RR) in Match 24 of the ongoing Indian Premier League (IPL) 2021, at the Feroz Shah Kotla on Thursday. Quinton … [+1060 chars]"
-        },
-        {
-            "source": {
-                "id": "the-times-of-india",
-                "name": "The Times of India"
-            },
-            "author": "Julie Mariappan",
-            "title": "Tamil Nadu extends night curfew and Sunday lockdown ‘until further orders’ - Times of India",
-            "description": "CHENNAI: The Tamil Nadu government extended night curfew and complete lockdown on Sundays until further orders.",
-            "url": "https://timesofindia.indiatimes.com/city/chennai/tamil-nadu-extends-night-curfew-and-sunday-lockdown-until-further-orders/articleshow/82307152.cms",
-            "urlToImage": "https://static.toiimg.com/thumb/msid-82307145,width-1070,height-580,imgsize-94195,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg",
-            "publishedAt": "2021-04-29T08:31:00Z",
-            "content": "Tamil Nadu extends night curfew and Sunday lockdown until further orders"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Livemint"
-            },
-            "author": "Staff Writer",
-            "title": "Full lockdown in Uttar Pradesh from tomorrow. Details here - Mint",
-            "description": "The total number of active Covid-19 cases in Uttar Pradesh stands at 3,00,041",
-            "url": "https://www.livemint.com/news/india/full-lockdown-in-uttar-pradesh-from-tomorrow-details-here-11619680956752.html",
-            "urlToImage": "https://images.livemint.com/img/2021/04/29/600x338/20210425_DNO_SGH_MN_SanitationDrive-001_1619681259710_1619681294956.jpg",
-            "publishedAt": "2021-04-29T07:47:57Z",
-            "content": "Amid the rise in Covid-19 cases, Uttar Pradesh will go under complete lockdown starting April 30 evening till 7 am on 4 May, news agency ANI reported. \"Lockdown in the state will now remain imposed f… [+1803 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "The Indian Express"
-            },
-            "author": "Tech Desk",
-            "title": "WhatsApp will soon make it easier to shift between iOS and Android; Here’s how - The Indian Express",
-            "description": "WhatsApp will make it easier for you to export and import chats between Android and iOS devices in the near future. Here is how.",
-            "url": "https://indianexpress.com/article/technology/social/whatsapp-will-soon-make-it-easier-to-shift-between-ios-and-android-here-is-how-7293532/",
-            "urlToImage": "https://images.indianexpress.com/2020/03/whatsapp-12-1.jpg",
-            "publishedAt": "2021-04-29T07:41:20Z",
-            "content": "WhatsApp will make it easier for you to export and import chats between Android and iOS devices in the near future. This will make the process of switching between the two platforms much easier and s… [+1284 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Hindustan Times"
-            },
-            "author": "hindustantimes.com",
-            "title": "'Should back MS Dhoni no matter what': Daniel Vettori after CSK captain's right pitch assessment against SRH - Hindustan Times",
-            "description": "MS Dhoni’s dew assessment did not come true but the wicket did appear to be a bit difficult in the first few overs when the Sunrisers were batting and Daniel Vettori said the CSK skipper's assessment should always be backed.",
-            "url": "https://www.hindustantimes.com/cricket/daniel-vettori-said-ms-dhoni-s-assessment-should-be-backed-no-matter-what-after-csk-vs-srh-ipl-2021-match-101619681252845.html",
-            "urlToImage": "https://images.hindustantimes.com/img/2021/04/29/1600x900/20210421272L_1619681648120_1619681660994.jpg",
-            "publishedAt": "2021-04-29T07:39:26Z",
-            "content": "Former New Zealand captain Daniel Vettori said Chennai Super Kings captain MS Dhonis assessment of the pitch should always be backed no matter what.' Vettoris comments came after CSK beat Sunrisers H… [+2500 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "NDTV News"
-            },
-            "author": null,
-            "title": "Uttarakhand Suspends 'Char Dham Yatra' As Covid Cases Rise In State - NDTV",
-            "description": "Amid a massive surge in the COVID-19 cases, the Uttarakhand government on Thursday suspended the Char Dham Yatra for this year. The yatra was scheduled to start from May 14.",
-            "url": "https://www.ndtv.com/india-news/covid-19-uttarakhand-government-suspends-char-dham-yatra-2424312",
-            "urlToImage": "https://c.ndtvimg.com/2020-06/korfbarg_badrinath-temple_625x300_07_June_20.jpg",
-            "publishedAt": "2021-04-29T07:32:03Z",
-            "content": "Chief Minister Tirath Singh Rawat said that only priests of four temples will perform rituals and puja.\r\nDehradun (Uttarakhand): Amid a massive surge in the COVID-19 cases, the Uttarakhand government… [+919 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Dtnext.in"
-            },
-            "author": "Shivakaminathan",
-            "title": "Over 20L vaccine doses to reach states/UTs in next 3 days - DTNext",
-            "description": "Nearly 16.16 crore vaccine doses have been provided to the states and the Union Territories free of cost while additional 20 lakh doses will reach them in next three days, the Union Ministry of Health and Family Welfare said in a statement on Thursday.",
-            "url": "http://www.dtnext.in/News/National/2021/04/29124837/1290926/Over-20L-vaccine-doses-to-reach-statesUTs-in-next-.vpf",
-            "urlToImage": "https://img.dtnext.in/Articles/2021/Apr/202104291248374430_Over-20L-vaccine-doses-to-reach-statesUTs-in-next-3-days_SECVPF.gif",
-            "publishedAt": "2021-04-29T07:27:15Z",
-            "content": "Nearly 16.16 crore vaccine doses have been provided to the states and the Union Territories free of cost while additional 20 lakh doses will reach them in next three days, the Union Ministry of Healt… [+1204 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "91mobiles"
-            },
-            "author": "https://www.facebook.com/abid.iqbal.shaik",
-            "title": "Vivo V21 5G launched in India with Dimensity 800U SoC, 90Hz display, and 44MP selfie camera: price, specifications - 91mobiles",
-            "description": "Vivo V21 5G price in India is Rs 21,999 for the sole variant of the phone, with specifications such as 44MP selfie camera, 90Hz refresh rate, 64MP primary sensor, and more.",
-            "url": "https://www.91mobiles.com/hub/vivo-v21-5g-launch-india-price-specifications/",
-            "urlToImage": "https://www.91-cdn.com/hub/wp-content/uploads/2021/04/Vivo_V21_5G-1.jpg",
-            "publishedAt": "2021-04-29T07:21:44Z",
-            "content": "Vivo V21 5G prices in India and specifications have been revealed as the smartphone has been launched in the country.\r\nThe Vivo V21 5G smartphone has been launched in India today as the latest afford… [+2737 chars]"
-        }
-    ]
-}
-
+	status: "ok",
+	totalResults: 38,
+	articles: [
+		{
+			source: {
+				id: null,
+				name: "Hindustan Times",
+			},
+			author: "hindustantimes.com",
+			title:
+				"'Dynamic process': Centre on whether gap between Covishield doses will be revised again - Hindustan Times",
+			description:
+				'"This is a dynamic process. There is no hardcore ideology in science. Our experts will go through the latest developments and take a call," VK Paul, Niti Aayog member (health) said on Friday. | Latest News India',
+			url:
+				"https://www.hindustantimes.com/india-news/dynamic-process-centre-on-whether-gap-between-covishield-doses-will-be-revised-again-101623417752118.html",
+			urlToImage:
+				"https://images.hindustantimes.com/img/2021/06/11/1600x900/1d5c7e36-ca29-11eb-b700-a8c712a7fe0f_1623418123321_1623418165925.jpg",
+			publishedAt: "2021-06-11T13:36:07Z",
+			content:
+				"Amid calls to reduce the gap between the two doses of Covishield, based on the new findings by Public Health England, the Union health ministry on Friday said there is no need to panic as such decisi… [+1489 chars]",
+		},
+		{
+			source: {
+				id: "the-times-of-india",
+				name: "The Times of India",
+			},
+			author: "Julie Mariappan",
+			title:
+				"Tamil Nadu lockdown extended with more relaxations; Tasmac liquor shops and salons to open in 27 distric - Times of India",
+			description:
+				"The Tamil Nadu government on Friday extended the total lockdown by another week ending 6am on June 21 and modified the relaxations further in 27 distr",
+			url:
+				"https://timesofindia.indiatimes.com/city/chennai/tamil-nadu-lockdown-extended-with-more-relaxations-tasmac-liquor-shops-to-open-in-27-districts/articleshow/83433530.cms",
+			urlToImage:
+				"https://static.toiimg.com/thumb/msid-83435203,width-1070,height-580,imgsize-41321,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg",
+			publishedAt: "2021-06-11T13:15:00Z",
+			content:
+				"Covid situation appears to be stabilizing in India but people need to follow appropriate behaviour: GovernmentThe Union health ministry said on Friday the Covid situation in the country appears to be… [+110 chars]",
+		},
+		{
+			source: {
+				id: null,
+				name: "Hindustan Times",
+			},
+			author: "hindustantimes.com",
+			title:
+				"Delta variant 60% more transmissible than Alpha, reduces vaccine efficacy: UK Study - Hindustan Times",
+			description:
+				"The Delta variant, which was upgraded from variant of interest to variant of concern by the World Health Organization, is said to be the reason behind the surge during the second wave of the pandemic. | World News",
+			url:
+				"https://www.hindustantimes.com/world-news/delta-variant-60-more-transmissible-than-alpha-reduces-vaccine-efficacy-uk-study-101623415416351.html",
+			urlToImage:
+				"https://images.hindustantimes.com/img/2021/06/11/1600x900/2021-06-11T124401Z_1855261089_RC2CYN9D94TQ_RTRMADP_3_HEALTH-CORONAVIRUS-BRITAIN_1623415778503_1623415794878.JPG",
+			publishedAt: "2021-06-11T12:53:04Z",
+			content:
+				"The Delta variant of Covid-19 which was first detected in India is 60% more transmissible than the Alpha variant, which was first detected in UKs Kent, Public Health England (PHE) said in a report on… [+2567 chars]",
+		},
+		{
+			source: {
+				id: null,
+				name: "LatestLY",
+			},
+			author: "IANS",
+			title: "VVV-WIT-08, Giant Blinking Star, Spotted by Astronomers Near Milky Way - LatestLY",
+			description:
+				"An international team of astronomers has spotted a giant 'blinking' star towards the centre of the Milky Way, more than 25,000 light years away. The star, VVV-WIT-08, decreased in brightness by a factor of 30, so that it nearly disappeared from the sky.",
+			url:
+				"https://www.latestly.com/technology/science/vvv-wit-08-giant-blinking-star-spotted-by-astronomers-near-milky-way-2540172.html",
+			urlToImage: "https://st1.latestly.com/wp-content/uploads/2018/04/Milky-Way.jpg",
+			publishedAt: "2021-06-11T12:50:00Z",
+			content:
+				"London, June 11: An international team of astronomers has spotted a giant 'blinking' star towards the centre of the Milky Way, more than 25,000 light years away. The star, VVV-WIT-08, decreased in br… [+2452 chars]",
+		},
+		{
+			source: {
+				id: null,
+				name: "Livemint",
+			},
+			author: "Asit Ranjan Mishra",
+			title: "India's April IIP surges 134.4% due to low-base effect - Mint",
+			description:
+				"The second wave of the covid-19 pandemic and slow vaccine rollout are widely expected to delay any meaningful economic revival in Asia’s third-largest economy",
+			url: "https://www.livemint.com/economy/india-april-iip-surges-1344-11623414298256.html",
+			urlToImage:
+				"https://images.livemint.com/img/2021/06/11/600x338/iip-ksTB--621x414@LiveMint_1623414728566.jpg",
+			publishedAt: "2021-06-11T12:32:41Z",
+			content:
+				"NEW DELHI: Indias factory output surged a massive 134.4% in April, primarily helped by the low base effect of the year-ago period when the Centre had imposed a nationwide lockdown, to limit the sprea… [+96 chars]",
+		},
+		{
+			source: {
+				id: null,
+				name: "Thehealthsite.com",
+			},
+			author: "Editorial Team",
+			title:
+				"ECMO for COVID Patients Who Do Not Respond To Mechanical Ventilation: What is it and How it works - TheHealthSite",
+			description:
+				"Severe COVID ARDS patients who do not respond to mechanical ventilation may need ECMO support. Here a Pulmonologist explains all you need to know about this treatment.",
+			url:
+				"https://www.thehealthsite.com/diseases-conditions/ecmo-for-covid-patients-who-do-not-respond-to-mechanical-ventilation-what-is-it-and-how-it-works-819328/",
+			urlToImage: "https://st1.thehealthsite.com/wp-content/uploads/2021/06/ECMO-655x353.png",
+			publishedAt: "2021-06-11T12:28:32Z",
+			content:
+				"The pneumonia presented with the novel coronavirus disease 2019 can lead to severe respiratory failure with profound hypoxemia that requires endotracheal intubation and mechanical ventilation. Patien… [+4014 chars]",
+		},
+		{
+			source: {
+				id: null,
+				name: "Hindustan Times",
+			},
+			author: "hindustantimes.com",
+			title:
+				"'For that Gill needs to bat well': Harbhajan Singh explains how India opener Shubman can make a difference in England - Hindustan Times",
+			description:
+				"Veteran off-spinner Harbhajan Singh stated that for India to put up big scores, the openers will play a crucial role and that they will have to play long innings. | Cricket",
+			url:
+				"https://www.hindustantimes.com/cricket/for-that-gill-needs-to-bat-well-harbhajan-singh-explains-how-india-opener-shubman-gill-can-make-a-difference-in-england-101623411552911.html",
+			urlToImage:
+				"https://images.hindustantimes.com/img/2021/06/11/1600x900/866cf335127f4f17a098c4fb48e28cda-866cf335127f4f17a098c4fb48e28cda-1_1615375446875_1623412265636.jpg",
+			publishedAt: "2021-06-11T11:49:35Z",
+			content:
+				"As the inaugural ICCWorld Test Championship (WTC) final between Virat Kohli's India and Kane Williamson-led New Zealand fast approaches, the buzz and anticipation surrounding the mega clash continue … [+1837 chars]",
+		},
+		{
+			source: {
+				id: "the-hindu",
+				name: "The Hindu",
+			},
+			author: "Shiv Sahay Singh",
+			title: "Mukul Roy returns to Trinamool Congress - The Hindu",
+			description:
+				"Mamata Banerjee describes him as an “old family member”; Mr. Roy’s son Subhrangshu follows his father’s footsteps.",
+			url: "https://www.thehindu.com/news/national/mukul-roy-returns-to-trinamool-congress/article34790007.ece",
+			urlToImage:
+				"https://www.thehindu.com/news/national/other-states/4qano6/article34790487.ece/ALTERNATES/LANDSCAPE_615/MukulRoy-Mamatajpg",
+			publishedAt: "2021-06-11T11:41:29Z",
+			content:
+				"Nearly a month after the BJP suffered a big defeat in the West Bengal Assembly polls, its vice president Mukul Roy on Friday returned to the Trinamool Congress (TMC). Mr. Roy (67), one of the foundin… [+1729 chars]",
+		},
+		{
+			source: {
+				id: null,
+				name: "ThePrint",
+			},
+			author: "Sandhya Ramesh",
+			title: "ESA announces themes for future missions, may send lander to icy moon of giant planet - ThePrint",
+			description:
+				"The ESA has announced themes for space and scientific missions for the timeframe 2035-2050; missions will focus on moons of the gas giants, habitable exoplanets, & investigating early universe.",
+			url:
+				"https://theprint.in/science/esa-announces-themes-for-future-missions-may-send-lander-to-icy-moon-of-giant-planet/676178/",
+			urlToImage: "https://static.theprint.in/wp-content/uploads/2019/06/Exoplanets-image.jpg",
+			publishedAt: "2021-06-11T11:25:18Z",
+			content:
+				"Bengaluru: The European Unions space agency, the European Space Agency, has announced its themes around which missions during the years 2035-2050 will focus. The missions that will be selected to lau… [+3813 chars]",
+		},
+		{
+			source: {
+				id: "google-news",
+				name: "Google News",
+			},
+			author: null,
+			title:
+				"Electronic Arts faces massive cybersecurity breach, 780GB data including FIFA 21 source code stolen - The Financial Express",
+			description: null,
+			url:
+				"https://news.google.com/__i/rss/rd/articles/CBMioAFodHRwczovL3d3dy5maW5hbmNpYWxleHByZXNzLmNvbS9pbmR1c3RyeS90ZWNobm9sb2d5L2VsZWN0cm9uaWMtYXJ0cy1mYWNlcy1tYXNzaXZlLWN5YmVyc2VjdXJpdHktYnJlYWNoLTc4MGdiLWRhdGEtaW5jbHVkaW5nLWZpZmEtMjEtc291cmNlLWNvZGUtc3RvbGVuLzIyNjk3NDUv0gGlAWh0dHBzOi8vd3d3LmZpbmFuY2lhbGV4cHJlc3MuY29tL2luZHVzdHJ5L3RlY2hub2xvZ3kvZWxlY3Ryb25pYy1hcnRzLWZhY2VzLW1hc3NpdmUtY3liZXJzZWN1cml0eS1icmVhY2gtNzgwZ2ItZGF0YS1pbmNsdWRpbmctZmlmYS0yMS1zb3VyY2UtY29kZS1zdG9sZW4vMjI2OTc0NS9saXRlLw?oc=5",
+			urlToImage: null,
+			publishedAt: "2021-06-11T11:12:00Z",
+			content: null,
+		},
+		{
+			source: {
+				id: null,
+				name: "India TV News",
+			},
+			author: "IANS",
+			title: "Sony India unveils new BRAVIA TV at Rs 139,990 - India TV News",
+			description:
+				"With an aim to power users with the latest technologies, Sony India on Thursday unveiled a new cognitive intelligence TV series, with the launch of BRAVIA 55X90J.",
+			url: "https://www.indiatvnews.com/technology/news-sony-india-unveils-new-bravia-tv-at-rs-139-990-711001",
+			urlToImage: "https://resize.indiatvnews.com/en/resize/newbucket/715_-/2021/06/sony-bravia-1623409657.jpg",
+			publishedAt: "2021-06-11T11:07:48Z",
+			content:
+				"Image Source : SONYSony India unveils new BRAVIA TV at Rs 139,990.\r\nWith an aim to power users with the latest technologies, Sony India on Thursday unveiled a new cognitive intelligence TV series, wi… [+1467 chars]",
+		},
+		{
+			source: {
+				id: null,
+				name: "The Indian Express",
+			},
+			author: "IE Online",
+			title: "Yogi Adityanath meets PM Modi, BJP chief Nadda amid UP rumblings - The Indian Express",
+			description:
+				"Yogi Adityanath's visit comes amidst speculation about changes in his government in Uttar Pradesh, which will go to Assembly election early next year.",
+			url: "https://indianexpress.com/article/india/yogi-adityanath-modi-meeting-bjp-up-7354457/",
+			urlToImage: "https://images.indianexpress.com/2021/06/Yogi-Modi-1.jpg",
+			publishedAt: "2021-06-11T10:50:30Z",
+			content:
+				"Uttar Pradesh Chief Minister Yogi Adityanath Friday met Prime Minister Narendra Modi at his residence in New Delhi.\r\nHis visit comes amidst speculation about changes in his government in UP, which wi… [+2615 chars]",
+		},
+		{
+			source: {
+				id: "the-times-of-india",
+				name: "The Times of India",
+			},
+			author: "TIMESOFINDIA.COM",
+			title:
+				"Coronavirus treatment: Is monoclonal antibody therapy effective in treating COVID-19 patients? - Times of India",
+			description:
+				"While scientists and experts are working tirelessly to find a solution to end this pandemic, they're also working towards developing efficient means of COVID-19 treatments. As of now, the monoclonal antibody therapy is the newest treatment therapy being used …",
+			url:
+				"https://timesofindia.indiatimes.com/life-style/health-fitness/health-news/coronavirus-treatment-is-monoclonal-antibody-therapy-effective-in-treating-covid-19-patients/photostory/83429351.cms",
+			urlToImage: "https://static.toiimg.com/photo/83429545.cms",
+			publishedAt: "2021-06-11T10:37:00Z",
+			content:
+				"According to recent reports, two COVID-19 patients at Sir Ganga Ram Hospital in New Delhi, were administered the monoclonal antibody drug. Following the therapy, they recovered from the disease and w… [+1179 chars]",
+		},
+		{
+			source: {
+				id: null,
+				name: "Moneycontrol",
+			},
+			author: null,
+			title:
+				"SBI launches kavach personal loan for Covid patients. Check interest rate and other details - Moneycontrol",
+			description:
+				"Reimbursement of expenses already incurred for COVID-19 related medical expenses shall also be provided under the scheme, SBI said.",
+			url:
+				"https://www.moneycontrol.com/news/india/sbi-launches-kavach-personal-loan-scheme-for-covid-19-patients-offers-rs-5-lakh-loan-at-8-5-interest-rate-7021971.html",
+			urlToImage: "https://images.moneycontrol.com/static-mcnews/2019/08/sbi_aug29-770x433.jpg",
+			publishedAt: "2021-06-11T10:32:14Z",
+			content:
+				"The State Bank of India (SBI) on June 11 launched the kavach personal loan scheme for COVID-19 patients. As per the scheme, the state-run lender is offering collateral free personal loans up to Rs 5 … [+1360 chars]",
+		},
+		{
+			source: {
+				id: "the-times-of-india",
+				name: "The Times of India",
+			},
+			author: "Tanvi Trivedi",
+			title: "No bail for Pearl V Puri today, next hearing on June 15 - Times of India",
+			description:
+				"The actor's bail hearing is postponed to June 15, after he was presented in judicial court today.",
+			url:
+				"https://timesofindia.indiatimes.com/tv/news/hindi/exclusive-no-bail-for-pearl-v-puri-next-hearing-on-june-15/articleshow/83429639.cms",
+			urlToImage:
+				"https://static.toiimg.com/thumb/msid-83429575,width-1070,height-580,overlay-toi_sw,pt-32,y_pad-40,resizemode-75,imgsize-120166/83429575.jpg",
+			publishedAt: "2021-06-11T10:16:00Z",
+			content: null,
+		},
+		{
+			source: {
+				id: null,
+				name: "News18",
+			},
+			author: "Education and Careers Desk",
+			title:
+				"Haryana Board HBSE 10th Result 2021 Declared LIVE Updates: All Pass, Check Marks at bseh.org.in - News18",
+			description: "Haryana Board HBSE 10th Result 2021: All the 3.",
+			url:
+				"https://www.news18.com/news/education-career/hbse-10th-result-2021-live-updates-haryana-board-matric-results-bseh-org-in-direct-link-3834005.html",
+			urlToImage: "https://images.news18.com/ibnlive/uploads/2021/06/1623392735_hbse1.jpg",
+			publishedAt: "2021-06-11T10:05:22Z",
+			content:
+				"Haryana Board HBSE 10th Result 2021: All the 3.21 lakh students who had registered to appear for class 10 exams of Haryana Board have been declared pass. This is the first time in the history of the … [+722 chars]",
+		},
+		{
+			source: {
+				id: null,
+				name: "Hindustan Times",
+			},
+			author: "Sugandha Rawal",
+			title:
+				"Saira Banu: Was a crucial time for Dilip saab, he will continue to be under observation at home - Hindustan Times",
+			description:
+				"Actor Saira Banu is elated with her husband and veteran actor Dilip Kumar getting discharged from the hospital, and thanked everyone for praying for his good health. | Bollywood",
+			url:
+				"https://www.hindustantimes.com/entertainment/bollywood/saira-banu-was-a-crucial-time-for-dilip-saab-he-will-continue-to-be-under-observation-at-home-101623405145544.html",
+			urlToImage:
+				"https://images.hindustantimes.com/img/2021/06/11/1600x900/4f9afaac-ca98-11eb-b0cf-a00e9b339624_1623405144629.jpg",
+			publishedAt: "2021-06-11T09:52:25Z",
+			content:
+				"Allah ka shukr hai Dilip saab ghar wapas aa gaye. Im so happy today, expresses Saira Banu, as her husband, legendary actor Dilip Kumar got discharged from a Mumbai hospital, after a successful proced… [+1864 chars]",
+		},
+		{
+			source: {
+				id: null,
+				name: "NDTV News",
+			},
+			author: "Neelav Chakravarti",
+			title:
+				"Warm Your Appetite For Euro 2020 With These Sensational Goals From The Tournament. Watch - NDTVSports.com",
+			description:
+				"UEFA EURO 2020: With Italy set to face Turkey in the opener, the tournament's official Instagram handle posted a montage of previous European Championship goals to keep fans entertained.",
+			url:
+				"https://sports.ndtv.com/euro-2020/uefa-euro-2020-warm-your-appetite-with-these-sensational-goals-from-the-tournament-archives-watch-2461587",
+			urlToImage: "https://c.ndtvimg.com/2021-06/e7ndegto_henry-instagram_625x300_11_June_21.jpg",
+			publishedAt: "2021-06-11T09:33:14Z",
+			content:
+				"With UEFA Euro 2020 all set to begin, football fans will be aiming to keep themselves entertained till July 12, in a year which has been overshadowed by the ongoing coronavirus pandemic. The tourname… [+1576 chars]",
+		},
+		{
+			source: {
+				id: "the-times-of-india",
+				name: "The Times of India",
+			},
+			author: "PTI",
+			title: "Over 1.17 crore Covid-19 vaccine doses available with states: Centre - Times of India",
+			description:
+				"India News: More than 1.17 crore Covid-19 vaccine doses are still available with the states and UTs, while over 38 lakh doses will be received by them within the",
+			url:
+				"https://timesofindia.indiatimes.com/india/over-1-17-crore-covid-19-vaccine-doses-available-with-states-centre/articleshow/83428518.cms",
+			urlToImage:
+				"https://static.toiimg.com/thumb/msid-83428499,width-1070,height-580,imgsize-70139,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg",
+			publishedAt: "2021-06-11T09:06:00Z",
+			content:
+				"Over 1.17 crore Covid-19 vaccine doses available with states: Centre\r\n<ul><li>News</li>\r\n<li>India News</li>\r\n<li>Over 1.17 crore Covid-19 vaccine doses available with states: Centre</li></ul>",
+		},
+		{
+			source: {
+				id: null,
+				name: "NDTV News",
+			},
+			author: "Edited by Gadgets 360 Newsdesk",
+			title: "Solar Eclipse 2021: NASA Shares Stunning Images of the Celestial Event on Instagram - Gadgets 360",
+			description:
+				'NASA posted a couple breath-taking images of the annular solar eclipse as seen from the United States on its official Instagram handle, calling it a "view of a lifetime." Check it out here.',
+			url:
+				"https://gadgets.ndtv.com/science/news/solar-eclipse-2021-photos-images-nasa-instagram-us-washington-capitol-2461517",
+			urlToImage: "https://i.gadgets360cdn.com/large/solar_eclipse_2021_nasa_instagram_1623401646514.jpg",
+			publishedAt: "2021-06-11T09:00:00Z",
+			content:
+				'NASA posted a couple breath-taking images of the annular solar eclipse as seen from the United States on its official Instagram handle, calling it a "view of a lifetime" The solar eclipse that occurr… [+2548 chars]',
+		},
+	],
+};
 export default StaticNews;
